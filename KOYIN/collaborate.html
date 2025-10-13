@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Koyin — Works</title>
+  <meta name="description" content="Selected works by KOYIN SANUSI — commercials, brand films, editorial stills." />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#060507; --panel:#0b0a0d; --ink:#f5f5f6; --muted:#a8a8af;
+      --line:rgba(255,255,255,.12); --accent:#e6e1da;
+      --lilac:#cdb5ff; --lilac-85:rgba(205,181,255,.85); --lilac-28:rgba(205,181,255,.28);
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:'Montserrat',system-ui,-apple-system,sans-serif; font-weight:300;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-rendering:optimizeLegibility;
+      overflow-x:hidden;
+    }
+
+    .hairline{height:1px; background:linear-gradient(90deg,transparent,var(--line),transparent)}
+    .caps{text-transform:uppercase; letter-spacing:.18em}
+    .serif{font-family:'Cormorant Garamond',serif; letter-spacing:.02em}
+    .micro{font-size:.76rem; color:var(--muted)}
+
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.85rem 1.6rem; border:1px solid var(--line); text-transform:uppercase; letter-spacing:.16em; transition:transform .25s ease, background .25s ease, border-color .25s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-ghost{color:var(--ink)}
+    .btn-ghost:hover{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.28)}
+    .btn-brand{border-color:var(--lilac); color:var(--lilac)}
+    .btn-brand:hover{background:var(--lilac); color:var(--bg)}
+
+    /* NAV (Refined) */
+    .site-nav{
+      position:fixed; top:14px; left:12px; right:12px; z-index:70;
+      border:1px solid var(--line); border-radius:12px; padding:.55rem .8rem;
+      display:flex; align-items:center; justify-content:space-between;
+      backdrop-filter:saturate(120%) blur(10px); background:rgba(0,0,0,.22);
+    }
+    .logo img{height:32px; width:auto; display:block}
+
+    .nav-links{display:flex; align-items:center; gap:.6rem}
+    .nav-links a{
+      position:relative; padding:.45rem .75rem; text-decoration:none;
+      font-size:.87rem; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--muted); transition:color .25s ease;
+    }
+    .nav-links a::after{
+      content:""; position:absolute; left:.75rem; right:.75rem; bottom:.28rem;
+      height:2px; background:linear-gradient(90deg,transparent,rgba(205,181,255,.55),transparent);
+      transform:scaleX(0); transform-origin:center; transition:transform .25s ease;
+      border-radius:2px;
+    }
+    .nav-links a:hover{color:var(--ink)}
+    .nav-links a:hover::after{transform:scaleX(1)}
+    .nav-links a.active{color:var(--lilac)}
+    .nav-links a.active::after{transform:scaleX(1)}
+
+    @media (max-width:1023px){
+      .site-nav{border-radius:10px}
+      .nav-links{display:none}
+      .nav-right{display:flex; align-items:center; gap:.4rem}
+      .burger{display:inline-flex}
+    }
+    @media (min-width:1024px){.burger{display:none}}
+
+    /* MOBILE MENU */
+    .mobile-menu{
+      position:fixed; inset:0; z-index:80; display:none;
+      background:rgba(6,5,7,.72); backdrop-filter:blur(16px) saturate(120%);
+    }
+    .mobile-menu.open{display:block}
+    .mobile-menu a{display:block; padding:1rem 0; font-size:1rem; letter-spacing:.14em}
+    .mobile-menu .cta{margin-top:1rem}
+
+    /* HERO */
+    header.hero{
+      position:relative; min-height:70vh; display:flex; align-items:flex-end; padding:22vh 1.25rem 10vh;
+      overflow:hidden; background:radial-gradient(80% 60% at 50% 40%, rgba(230,225,218,.06), transparent 60%);
+    }
+    .hero-media{position:absolute; inset:0; z-index:0; overflow:hidden}
+    .hero-media img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      filter:contrast(1.05) saturate(.85) brightness(.66); transform:scale(1.02);
+    }
+    .hero-media::after{
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(120% 90% at 26% 70%, rgba(0,0,0,.82) 0%, rgba(0,0,0,.58) 48%, rgba(0,0,0,.30) 70%, transparent 82%),
+        linear-gradient(180deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.34) 40%, transparent 75%),
+        linear-gradient(0deg, rgba(0,0,0,.26), rgba(0,0,0,.26));
+    }
+    .hero-inner{position:relative; z-index:2; max-width:1200px; margin:0 auto; width:100%}
+    .hero-copy{
+      background:rgba(6,5,7,.36); backdrop-filter:blur(10px) saturate(120%); -webkit-backdrop-filter:blur(10px) saturate(120%);
+      border:1px solid rgba(255,255,255,.10); border-radius:14px; padding:1.1rem 1.1rem .95rem;
+    }
+
+    /* HERO TYPE SYSTEM */
+    .hero-kicker{font:500 .8rem/1 'Montserrat',system-ui,-apple-system,sans-serif; letter-spacing:.22em; text-transform:uppercase; color:rgba(245,245,246,.78)}
+    .hero-title{
+      font-family:'Cormorant Garamond',serif; font-weight:600; line-height:1.06; letter-spacing:.02em;
+      text-transform:none; font-size:clamp(34px,5.2vw,68px); color:#f5f5f6; text-shadow:0 10px 28px rgba(0,0,0,.36);
+      margin:.1rem 0 .35rem 0;
+    }
+    .hero-sub{font:400 clamp(14px,1.6vw,18px)/1.45 'Montserrat',system-ui,-apple-system,sans-serif; color:#e6e1da; opacity:.95}
+    .hero-underline{width:72px; height:2px; background:linear-gradient(90deg,#cdb5ff,#ffffff60); opacity:.9; margin:.65rem 0 .25rem; border-radius:2px}
+
+    /* FRAMES */
+    .frame{border:1px solid rgba(255,255,255,.12); border-radius:14px; overflow:hidden; background:#000; box-shadow:0 12px 32px rgba(0,0,0,.28); position:relative}
+    .frame img,.frame iframe{display:block; width:100%; height:100%; object-fit:cover}
+    .frame:hover img{transform:scale(1.06); transition:transform .6s cubic-bezier(.2,.9,.2,1)}
+    .frame .meta{padding:.75rem .9rem; border-top:1px solid rgba(255,255,255,.08)}
+    .chip{border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:.18rem .6rem; font-size:.72rem; color:var(--lilac)}
+
+    /* Premium lilac ring glow */
+    .frame::after{content:""; position:absolute; inset:-1px; border-radius:14px; pointer-events:none; box-shadow:0 0 0 0 rgba(205,181,255,0); transition:box-shadow .45s ease}
+    .frame.ring-lilac:hover::after{box-shadow:0 0 26px 2px rgba(205,181,255,.22)}
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeUp{from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:none}}
+    @keyframes clipReveal{from{opacity:.01; clip-path:inset(0 0 100% 0)} to{opacity:1; clip-path:inset(0 0 0 0)}}
+    @keyframes slideL{from{opacity:0; transform:translateX(-42px)} to{opacity:1; transform:none}}
+    @keyframes slideR{from{opacity:0; transform:translateX(42px)} to{opacity:1; transform:none}}
+    @keyframes slideLsm{from{opacity:0; transform:translateX(-26px)} to{opacity:1; transform:none}}
+    @keyframes slideRsm{from{opacity:0; transform:translateX(26px)} to{opacity:1; transform:none}}
+
+    .reveal{opacity:0; will-change:transform,opacity}
+    .reveal.in{animation:fadeUp .9s cubic-bezier(.2,.9,.2,1) forwards; animation-delay:var(--d, 0s)}
+    .reveal-clip{opacity:0}
+    .reveal-clip.in{animation:clipReveal 1.1s cubic-bezier(.2,.8,.2,1) forwards; animation-delay:var(--d, 0s)}
+    .look{opacity:0}
+    .look.from-l.in{animation:slideL .9s cubic-bezier(.22,.9,.22,1) forwards}
+    .look.from-r.in{animation:slideR .9s cubic-bezier(.22,.9,.22,1) forwards}
+    @media (max-width:767px){
+      .look.from-l.in{animation:slideLsm .7s cubic-bezier(.22,.9,.22,1) forwards}
+      .look.from-r.in{animation:slideRsm .7s cubic-bezier(.22,.9,.22,1) forwards}
+    }
+
+    /* Flying Fish: portrait crop mobile, cinematic 16:9 desktop */
+    .featureTall img{object-position:center 14%}
+
+    /* Mobile hero tuning */
+    @media (max-width:767px){
+      header.hero{padding:calc(84px + 5vh) 1rem 8vh; min-height:88vh}
+      .hero-media img{filter:contrast(1.06) saturate(.9) brightness(.60); object-position:center 24%}
+      .hero-media::after{
+        background:
+          radial-gradient(120% 95% at 50% 72%, rgba(0,0,0,.86) 0%, rgba(0,0,0,.60) 46%, rgba(0,0,0,.32) 70%, transparent 86%),
+          linear-gradient(180deg, rgba(0,0,0,.70), rgba(0,0,0,.30) 50%, transparent 78%),
+          linear-gradient(0deg, rgba(0,0,0,.24), rgba(0,0,0,.24));
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .reveal,.reveal-clip,.look{opacity:1 !important; animation:none !important}
+      .frame:hover img{transform:none !important}
+    }
+
+    /* FOOTER socials */
+    .social a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:38px; height:38px; border-radius:999px; border:1px solid rgba(255,255,255,.14);
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .social a:hover{transform:translateY(-3px); border-color:rgba(205,181,255,.55); background:rgba(205,181,255,.06)}
+    .social svg{width:18px; height:18px}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="site-nav" role="navigation" aria-label="Primary">
+    <div class="logo">
+      <a href="index.html"><img src="img/Logo2.png" alt="KOYIN logo" loading="eager"></a>
+    </div>
+
+    <!-- SIMPLIFIED DESKTOP NAV -->
+    <div class="nav-links">
+      <a href="index.html"active">Home</a>
+      <a href="index.html#thestory">The Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <button id="navToggle" aria-expanded="false" aria-controls="mobileMenu" class="burger p-2 rounded-md border border-white/10 hover:border-white/25">
+        <span class="sr-only">Open menu</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="h-full max-w-[640px] mx-auto px-6 flex flex-col">
+      <div class="flex items-center justify-between py-4">
+        <img src="img/Logo2.png" alt="KOYIN logo" class="h-8">
+        <button id="navClose" class="p-2 rounded-md border border-white/10 hover:border-white/25">
+          <span class="sr-only">Close menu</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="grow flex flex-col justify-center">
+        <nav class="space-y-1">
+          <a href="index.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--lilac)]">Home</a>
+          <a href="index.html#thestory" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">The Story</a>
+          <a href="contact.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)]">Contact</a>
+        </nav>
+        <div class="cta pt-6">
+          <a href="contact.html" class="btn btn-brand w-full justify-center">Start enquiry</a>
+        </div>
+      </div>
+      <div class="pb-6 text-center micro" style="color:var(--lilac)">© KOYIN SANUSI</div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" aria-labelledby="heroTitle">
+    <div class="hero-media absolute inset-0 -z-10 overflow-hidden">
+      <img src="img/nav.jpg" alt="Koyin — works hero"/>
+    </div>
+
+    <div class="hero-inner grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-7">
+        <div class="hero-copy reveal">
+          <span class="hero-kicker">Selected Work</span>
+          <h1 id="heroTitle" class="hero-title">Commercials, Brand Film & Editorial</h1>
+          <div class="hero-underline"></div>
+          <p class="hero-sub mt-2">Gen-Z taste with measurable impact — trusted by culture and brands.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a class="btn btn-brand" href="#commercials">Commercials</a>
+            <a class="btn btn-ghost" href="#filmography">Filmography</a>
+            <a class="btn btn-ghost" href="#lookbook">Lookbook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="px-5 md:px-6 lg:px-8 max-w-[1200px] mx-auto py-12 md:py-16">
+
+    <!-- COMMERCIALS -->
+    <section class="reveal" id="commercials">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="uppercase tracking-[.18em] text-[.95rem]">Commercials</h2>
+        <span class="micro">Selected spots</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <!-- Flying Fish — IMAGE TILE -->
+        <article class="frame ring-lilac reveal-clip featureTall">
+          <a href="contact.html" class="block">
+            <div class="relative aspect-[3/4] md:aspect-[16/9]">
+              <img src="img/ff1.jpg" alt="Flying Fish commercial — key still featuring Koyin" class="absolute inset-0 w-full h-full object-cover"/>
+            </div>
+          </a>
+          <div class="meta flex items-center justify-between">
+            <span class="serif text-[15px]">Flying Fish — Commercial</span>
+            <span class="chip">Key Still</span>
+          </div>
+        </article>
+
+        <!-- Coca-Cola — YT EMBED (single) -->
+        <article class="frame ring-lilac reveal-clip">
+          <div class="relative aspect-[16/9]">
+            <iframe class="absolute inset-0 w-full h-full"
+              src="https://www.youtube-nocookie.com/embed/xS6AG-ukpKA?rel=0&modestbranding=1&playsinline=1"
+              title="Coca-Cola commercial — Koyin" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="meta flex items-center justify-between">
+            <span class="serif text-[15px]">Coca-Cola — Commercial</span>
+            <span class="chip">YouTube</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK (reduced) -->
+   <section class="mt-12" id="lookbook">
+  <div class="flex items-center justify-between mb-3">
+    <h2 class="uppercase tracking-[.18em] text-[.95rem]">Lookbook</h2>
+    <span class="micro">Editorial & campaign frames</span>
+  </div>
+
+  <!-- more columns on wider screens = smaller cards -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5">
+    <figure class="frame ring-lilac look">
+      <div class="relative aspect-[3/4] bg-neutral-100">
+        <img src="img/5.jpg" alt="Editorial still 01"
+             class="absolute inset-0 w-full h-full object-contain" loading="lazy">
+      </div>
+      <figcaption class="meta serif text-[15px]">Editorial — Look 01</figcaption>
+    </figure>
+
+    <figure class="frame ring-lilac look">
+      <div class="relative aspect-[4/5] bg-neutral-100">
+        <img src="img/a.jpg" alt="Editorial still 02"
+             class="absolute inset-0 w-full h-full object-contain" loading="lazy">
+      </div>
+      <figcaption class="meta serif text-[15px]">Editorial — Look 02</figcaption>
+    </figure>
+
+    <figure class="frame ring-lilac look">
+      <div class="relative aspect-[4/5] bg-neutral-100">
+        <img src="img/b.jpg" alt="Editorial still 02"
+             class="absolute inset-0 w-full h-full object-contain" loading="lazy">
+      </div>
+      <figcaption class="meta serif text-[15px]">Editorial — Look 02</figcaption>
+    </figure>
+
+    <figure class="frame ring-lilac look">
+      <div class="relative aspect-[1/1] bg-neutral-100">
+        <img src="/assets/stills/look-06.jpg" alt="Editorial still 06"
+             class="absolute inset-0 w-full h-full object-contain" loading="lazy">
+      </div>
+      <figcaption class="meta serif text-[15px]">Editorial — Look 06</figcaption>
+    </figure>
+  </div>
+</section>
+
+    <!-- FILMOGRAPHY -->
+    <section class="reveal mt-12" id="filmography">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="uppercase tracking-[.18em] text-[.95rem]">Filmography</h2>
+        <span class="micro">Selected roles</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+        <article class="frame ring-lilac reveal-clip">
+          <div class="relative aspect-[2/3]">
+            <img src="img/m1.jpg" alt="Students on the Island (2024) — poster" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="meta">
+            <div class="flex items-center justify-between">
+              <span class="serif text-[15px]">Students on the Island</span>
+              <span class="chip">2024 · IMDb</span>
+            </div>
+            <p class="micro mt-1">Feature — Role credited.</p>
+          </div>
+        </article>
+
+        <article class="frame ring-lilac reveal-clip">
+          <div class="relative aspect-[2/3]">
+            <img src="img/m2.jpg" alt="Sent from Above (2024) — poster" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="meta">
+            <div class="flex items-center justify-between">
+              <span class="serif text-[15px]">Sent from Above</span>
+              <span class="chip">2024 · IMDb</span>
+            </div>
+            <p class="micro mt-1">Feature — Role credited.</p>
+          </div>
+        </article>
+
+        <article class="frame ring-lilac reveal-clip">
+          <div class="relative aspect-[2/3]">
+            <img src="img/m3.jpg" alt="Heart of the Poor — poster" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="meta">
+            <div class="flex items-center justify-between">
+              <span class="serif text-[15px]">Heart of the Poor</span>
+              <span class="chip">Feature</span>
+            </div>
+            <p class="micro mt-1">Drama — Cast role.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="micro mt-3">Note: First two titles are listed on IMDb.</p>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="reveal mt-12">
+      <div class="hairline mb-5"></div>
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <p class="micro">Include usage, territories and term in your brief for accurate quoting.</p>
+        <div class="flex gap-2">
+          <a class="btn btn-brand" href="contact.html">Start enquiry</a>
+          <a class="btn btn-ghost" href="index.html#thestory">The Story</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (standard + socials) -->
+  <footer class="px-5 py-12">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="hairline mb-6"></div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+        <div class="text-center md:text-left">
+          <div class="serif text-[18px] text-[#e6e1da]">KOYIN SANUSI</div>
+          <div class="micro mt-1">Not talent. Testament.</div>
+        </div>
+
+        <div class="social flex items-center gap-3">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="https://x.com/koyin_official?s=21" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-8 9 8 11h-6.9l-4.5-6-5.6 6H1l8.6-9.3L1.5 2H8.5l4.1 5.5L18 2Z"/></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z"/></svg>
+          </a>
+          <!-- Facebook (placeholder if you don't have one yet) -->
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center md:text-left micro mt-6">&copy; <span id="yr"></span> Koyin Sanusi</div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const navToggle = document.getElementById('navToggle');
+    const navClose  = document.getElementById('navClose');
+    const mobileMenu= document.getElementById('mobileMenu');
+    function openMenu(){ mobileMenu.classList.add('open'); navToggle?.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu(){ mobileMenu.classList.remove('open'); navToggle?.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    navToggle?.addEventListener('click', openMenu);
+    navClose?.addEventListener('click', closeMenu);
+    mobileMenu?.addEventListener('click', (e)=>{ const el=e.target; if (el.id==='mobileMenu' || el.tagName==='A') closeMenu(); });
+    window.addEventListener('keydown', (e)=>{ if (e.key==='Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
+
+    (function(){
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Reveals + ClipReveals with replay on back/return
+      const reveals = [...document.querySelectorAll('.reveal, .reveal-clip')];
+      if (!prefersReduced){
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach((e)=>{
+            if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold:0.08, rootMargin:"0px 0px -10% 0px" });
+
+        reveals.forEach((el,i)=>{ el.style.setProperty('--d', (0.05*(i%8))+'s'); io.observe(el); });
+
+        function replay(){
+          document.querySelectorAll('.in').forEach(el=>el.classList.remove('in'));
+          requestAnimationFrame(()=> reveals.forEach(el=> el.classList.add('in')));
+          looks.forEach(el=> lookIO.observe(el));
+        }
+        window.addEventListener('pageshow', (ev)=>{ if (ev.persisted) replay(); });
+        document.addEventListener('visibilitychange', ()=>{
+          const nav = performance.getEntriesByType('navigation')[0];
+          if (document.visibilityState==='visible' && nav && nav.type==='back_forward') replay();
+        });
+      } else {
+        reveals.forEach(el=>el.classList.add('in'));
+      }
+
+      // Lookbook meet-in-the-middle
+      const looks = [...document.querySelectorAll('.look')];
+      looks.forEach((el, idx)=> el.classList.add(idx%2===0 ? 'from-l' : 'from-r'));
+      const lookIO = new IntersectionObserver((entries)=>{
+        entries.forEach((e)=>{ if (e.isIntersecting){ e.target.classList.add('in'); lookIO.unobserve(e.target); } });
+      }, { threshold:0.12, rootMargin:"0px 0px -6% 0px" });
+      looks.forEach(el=> lookIO.observe(el));
+
+      // Subtle hero parallax
+      const heroImg = document.querySelector('.hero-media img');
+      if (!prefersReduced && heroImg){
+        let ticking=false;
+        const parallax=()=>{ const y=window.scrollY||window.pageYOffset; const off=Math.min(60, y*0.12); heroImg.style.transform=`translateY(${off}px) scale(1.03)`; ticking=false; };
+        const onScroll=()=>{ if(!ticking){ ticking=true; requestAnimationFrame(parallax);} };
+        window.addEventListener('scroll', onScroll, { passive:true });
+        parallax();
+      }
+    })();
+  </script>
+</body>
+</html>
