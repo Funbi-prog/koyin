@@ -818,7 +818,7 @@
             </div>
             <div class="grid-3" style="margin-top:.8rem">
                 <article class="card">
-                    <img src="/assets/moments/modeling-01.jpg" alt="Modeling — editorial campaign">
+                    <video src="videos/bil.mp4" controls autoplay muted loop poster="/assets/moments/modeling-01.jpg" style="width:100%;height:320px;object-fit:cover;display:block;"></video>
                     <div class="copy">
                         <h3 class="caps micro">Modeling</h3>
                         <p class="meta">Runway presence and visuals that convert attention into desire.</p>
@@ -1127,7 +1127,7 @@
             </div>
         </section>
     </main>
-    <footer class="px-5 py-12">
+    <footer class="px-5 py-12 relative z-20">
         <div class="max-w-[1200px] mx-auto">
             <div class="hairline mb-6"></div>
 
@@ -1198,6 +1198,9 @@
                         if (breathing) breathing.style.display = 'none';
                         introType.textContent = 'KOYIN SANUSI'; introType.style.opacity = '1';
                         document.querySelectorAll('.intro-btn').forEach(b => b.classList.add('show'));
+                        // Hide intro after animation so footer and content are visible
+                        intro.classList.add('hidden');
+                        document.body.style.overflowY = 'auto';
                     }, 900);
                 }, 3000);
             });
