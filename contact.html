@@ -330,8 +330,8 @@
   <!-- Desktop links (only: Home / The Story / Contact) -->
   <div class="nav-links">
     <a href="index.html" class="caps">Home</a>
-     <a href="thestory.html" class="caps">His story</a>
-      <a href="collaborate.html" class="caps">The Story</a>
+     <a href="collaborate.html" class="caps">His work</a>
+      <a href="thestory.html" class="caps">His Story</a>
   
   </div>
 
@@ -362,8 +362,8 @@
     <div class="grow flex flex-col justify-center">
       <nav class="space-y-1">
         <a href="index.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">Home</a>
-        <a href="index.html#thestory" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">The Story</a>
-        <a href="contact.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)]">Contact</a>
+        <a href="collaborate.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">His Work</a>
+        <a href="thestory.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)]">His story</a>
       </nav>
 
       <div class="cta pt-6">
@@ -586,13 +586,13 @@
                         </p>
                     </details>
                 </div>
-            </aside>
-        </div>
-    </main>
-
-      <footer class="px-5 py-12">
-    <div class="max-w-[1200px] mx-auto">
-      <div class="hairline mb-6"></div>
+                </aside>
+            </div>
+        </main>
+    
+    <footer class="px-5 py-12">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="hairline mb-6"></div>
 
       <div class="flex flex-col md:flex-row items-center justify-between gap-5">
         <div class="text-center md:text-left">
@@ -696,6 +696,9 @@
                 submitBtn.disabled = false; submitBtn.textContent = 'Send enquiry';
             }
         });
+
+        // Set current year in footer
+        document.getElementById('yr').textContent = new Date().getFullYear();
     </script>
 </body>
 
