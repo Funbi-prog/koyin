@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Koyin Works</title>
   <meta name="description" content="Selected works by KOYIN SANUSI brand campaigns, commercials, film, editorial." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -14,15 +17,24 @@
       --ink: #f0ede8;
       --muted: #7a7880;
       --dim: #3a3840;
-      --line: rgba(255,255,255,.09);
+      --line: rgba(255, 255, 255, .09);
       --lilac: #cdb5ff;
-      --lilac-dim: rgba(205,181,255,.18);
+      --lilac-dim: rgba(205, 181, 255, .18);
       --gold: #d4b483;
       --cream: #e6e1da;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -46,747 +58,1246 @@
     }
 
     /* ── TYPOGRAPHY ── */
-    .bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; }
-    .serif { font-family: 'Cormorant Garamond', serif; }
-    .caps { text-transform: uppercase; letter-spacing: .18em; }
-    .micro { font-size: .72rem; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
+    .bebas {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: .04em;
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .caps {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    .micro {
+      font-size: .72rem;
+      color: var(--muted);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
 
     /* ── NAV ── */
     .site-nav {
-      position: fixed; top: 14px; left: 12px; right: 12px; z-index: 200;
-      border: 1px solid var(--line); border-radius: 12px;
+      position: fixed;
+      top: 14px;
+      left: 12px;
+      right: 12px;
+      z-index: 200;
+      border: 1px solid var(--line);
+      border-radius: 12px;
       padding: .55rem .8rem;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       backdrop-filter: saturate(120%) blur(14px);
-      background: rgba(6,5,7,.55);
+      background: rgba(6, 5, 7, .55);
     }
-    .logo img { height: 30px; width: auto; display: block; }
-    .nav-links { display: flex; align-items: center; gap: .2rem; }
-    .nav-links a {
-      padding: .4rem .7rem; text-decoration: none; font-size: .8rem;
-      letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
-      transition: color .2s ease; border-radius: 6px;
-    }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a.active { color: var(--lilac); }
 
-    @media(max-width:1023px) { .nav-links { display: none; } .burger { display: inline-flex; } }
-    @media(min-width:1024px) { .burger { display: none; } }
+    .logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .2rem;
+    }
+
+    .nav-links a {
+      padding: .4rem .7rem;
+      text-decoration: none;
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color .2s ease;
+      border-radius: 6px;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .nav-links a.active {
+      color: var(--lilac);
+    }
+
+    @media(max-width:1023px) {
+      .nav-links {
+        display: none;
+      }
+
+      .burger {
+        display: inline-flex;
+      }
+    }
+
+    @media(min-width:1024px) {
+      .burger {
+        display: none;
+      }
+    }
 
     /* Mobile menu */
     .mobile-menu {
-      position: fixed; inset: 0; z-index: 300; display: none;
-      background: rgba(6,5,7,.88); backdrop-filter: blur(20px);
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: none;
+      background: rgba(6, 5, 7, .88);
+      backdrop-filter: blur(20px);
     }
-    .mobile-menu.open { display: block; }
-    .mobile-menu a { display: block; padding: .9rem 0; font-size: .95rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); }
-    .mobile-menu a:hover, .mobile-menu a.active { color: var(--lilac); }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: .9rem 0;
+      font-size: .95rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a.active {
+      color: var(--lilac);
+    }
 
     /* ── BUTTONS ── */
     .btn {
-      display: inline-flex; align-items: center; gap: .5rem;
-      padding: .75rem 1.5rem; border: 1px solid var(--line);
-      text-transform: uppercase; letter-spacing: .16em; font-size: .75rem;
-      font-family: 'Montserrat', sans-serif; font-weight: 400;
-      cursor: pointer; text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1.5rem;
+      border: 1px solid var(--line);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .75rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      cursor: pointer;
+      text-decoration: none;
       transition: transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
     }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-brand { border-color: var(--lilac); color: var(--lilac); }
-    .btn-brand:hover { background: var(--lilac); color: var(--bg); }
-    .btn-ghost { color: var(--ink); }
-    .btn-ghost:hover { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.25); }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-brand {
+      border-color: var(--lilac);
+      color: var(--lilac);
+    }
+
+    .btn-brand:hover {
+      background: var(--lilac);
+      color: var(--bg);
+    }
+
+    .btn-ghost {
+      color: var(--ink);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, .05);
+      border-color: rgba(255, 255, 255, .25);
+    }
 
     /* ── HERO ── */
     .hero {
-      position: relative; min-height: 100vh;
-      display: flex; align-items: flex-end;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
       padding: 0 clamp(1rem, 4vw, 3rem) clamp(4rem, 8vh, 7rem);
       overflow: hidden;
     }
 
-    .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
     .hero-media img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       filter: contrast(1.08) saturate(.75) brightness(.55);
       transform: scale(1.04);
       transition: transform 12s ease;
     }
-    .hero.loaded .hero-media img { transform: scale(1); }
+
+    .hero.loaded .hero-media img {
+      transform: scale(1);
+    }
 
     .hero-media::after {
-      content: ""; position: absolute; inset: 0; pointer-events: none;
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
       background:
-        linear-gradient(to top, rgba(6,5,7,.95) 0%, rgba(6,5,7,.6) 30%, rgba(6,5,7,.15) 65%, transparent 100%),
-        linear-gradient(to right, rgba(6,5,7,.5) 0%, transparent 60%);
+        linear-gradient(to top, rgba(6, 5, 7, .95) 0%, rgba(6, 5, 7, .6) 30%, rgba(6, 5, 7, .15) 65%, transparent 100%),
+        linear-gradient(to right, rgba(6, 5, 7, .5) 0%, transparent 60%);
     }
 
     /* Big decorative background text */
     .hero-bg-text {
-      position: absolute; bottom: -2rem; right: -1rem; z-index: 1;
+      position: absolute;
+      bottom: -2rem;
+      right: -1rem;
+      z-index: 1;
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(120px, 22vw, 320px);
-      color: rgba(255,255,255,.025);
-      line-height: 1; pointer-events: none; user-select: none;
+      color: rgba(255, 255, 255, .025);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
       letter-spacing: -.01em;
     }
 
     .hero-inner {
-      position: relative; z-index: 2;
-      width: 100%; max-width: 1200px; margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .hero-kicker {
-      font-size: .72rem; letter-spacing: .28em; text-transform: uppercase;
-      color: var(--lilac); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: .8rem;
+      font-size: .72rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--lilac);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .8rem;
     }
+
     .hero-kicker::before {
-      content: ""; display: block; width: 32px; height: 1px; background: var(--lilac); opacity: .6;
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--lilac);
+      opacity: .6;
     }
 
     .hero-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(52px, 9vw, 130px);
-      line-height: .95; letter-spacing: .02em;
-      color: var(--ink); margin-bottom: 1.2rem;
+      line-height: .95;
+      letter-spacing: .02em;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
     }
+
     .hero-title em {
       font-family: 'Cormorant Garamond', serif;
-      font-style: italic; font-size: .62em;
-      color: var(--cream); letter-spacing: .04em;
+      font-style: italic;
+      font-size: .62em;
+      color: var(--cream);
+      letter-spacing: .04em;
     }
 
     .hero-desc {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(16px, 1.8vw, 22px);
-      color: var(--cream); opacity: .85; max-width: 520px; line-height: 1.5;
+      color: var(--cream);
+      opacity: .85;
+      max-width: 520px;
+      line-height: 1.5;
       margin-bottom: 2rem;
     }
 
     .hero-stats {
-      display: flex; gap: 2.5rem; margin-bottom: 2rem;
-      padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
     }
+
     .hero-stat-num {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.8rem; line-height: 1; color: var(--lilac); display: block;
+      font-size: 2.8rem;
+      line-height: 1;
+      color: var(--lilac);
+      display: block;
     }
-    .hero-stat-label { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: .2rem; display: block; }
+
+    .hero-stat-label {
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .2rem;
+      display: block;
+    }
 
     .hero-nav-pills {
-      display: flex; flex-wrap: wrap; gap: .6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
     }
+
     .pill {
-      padding: .38rem .9rem; border: 1px solid rgba(255,255,255,.12); border-radius: 999px;
-      font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none;
-      transition: all .2s ease; background: rgba(6,5,7,.4);
+      padding: .38rem .9rem;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 999px;
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: all .2s ease;
+      background: rgba(6, 5, 7, .4);
     }
-    .pill:hover { border-color: var(--lilac); color: var(--lilac); background: rgba(205,181,255,.06); }
+
+    .pill:hover {
+      border-color: var(--lilac);
+      color: var(--lilac);
+      background: rgba(205, 181, 255, .06);
+    }
 
     /* ── SECTION SYSTEM ── */
     .section-wrap {
-      max-width: 1200px; margin: 0 auto;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: clamp(4rem, 8vh, 7rem) clamp(1rem, 4vw, 3rem);
     }
 
     .section-label {
-      display: flex; align-items: center; gap: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
       margin-bottom: 2.5rem;
     }
+
     .section-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(72px, 10vw, 120px);
-      line-height: 1; color: rgba(255,255,255,.04);
-      user-select: none; pointer-events: none;
-      position: relative; top: .1em;
+      line-height: 1;
+      color: rgba(255, 255, 255, .04);
+      user-select: none;
+      pointer-events: none;
+      position: relative;
+      top: .1em;
       transition: color .4s ease;
     }
-    .section-wrap:hover .section-num { color: rgba(205,181,255,.07); }
 
-    .section-title-block { flex: 1; }
+    .section-wrap:hover .section-num {
+      color: rgba(205, 181, 255, .07);
+    }
+
+    .section-title-block {
+      flex: 1;
+    }
+
     .section-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(28px, 4vw, 52px);
-      letter-spacing: .06em; line-height: 1;
+      letter-spacing: .06em;
+      line-height: 1;
       color: var(--ink);
     }
+
     .section-sub {
-      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
-      color: var(--muted); margin-top: .4rem;
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .4rem;
     }
 
     .section-divider {
-      width: 100%; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.08) 30%, rgba(255,255,255,.08) 70%, transparent);
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08) 30%, rgba(255, 255, 255, .08) 70%, transparent);
       margin-bottom: clamp(4rem, 8vh, 7rem);
     }
 
     /* ── BRAND CAMPAIGN CARDS ── */
     .campaign-card {
-      position: relative; border-radius: 16px; overflow: hidden;
-      background: #080709; border: 1px solid rgba(255,255,255,.07);
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #080709;
+      border: 1px solid rgba(255, 255, 255, .07);
       cursor: pointer;
       transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
     }
+
     .campaign-card:hover {
-      border-color: rgba(205,181,255,.3);
-      box-shadow: 0 24px 60px rgba(0,0,0,.6), 0 0 40px rgba(205,181,255,.08);
+      border-color: rgba(205, 181, 255, .3);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .6), 0 0 40px rgba(205, 181, 255, .08);
       transform: translateY(-3px);
     }
 
     .campaign-card .media {
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+
     .campaign-card .media video,
     .campaign-card .media img.poster {
-      display: block; width: 100%; height: 100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      transition: transform .7s cubic-bezier(.2,.9,.2,1);
+      transition: transform .7s cubic-bezier(.2, .9, .2, 1);
     }
+
     .campaign-card:hover .media video,
-    .campaign-card:hover .media img.poster { transform: scale(1.05); }
+    .campaign-card:hover .media img.poster {
+      transform: scale(1.05);
+    }
 
     /* video always on top */
-    .campaign-card .media video { position: absolute; inset: 0; z-index: 2; }
-    .campaign-card .media img.poster { position: absolute; inset: 0; z-index: 1; display: none; }
-    .campaign-card .media img.poster.show { display: block; }
-    .campaign-card .media .media-inner { position: relative; width: 100%; }
+    .campaign-card .media video {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .campaign-card .media img.poster {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: none;
+    }
+
+    .campaign-card .media img.poster.show {
+      display: block;
+    }
+
+    .campaign-card .media .media-inner {
+      position: relative;
+      width: 100%;
+    }
 
     .card-overlay {
-      position: absolute; inset: 0; z-index: 3;
-      background: linear-gradient(to top, rgba(6,5,7,.92) 0%, rgba(6,5,7,.4) 38%, transparent 65%);
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: linear-gradient(to top, rgba(6, 5, 7, .92) 0%, rgba(6, 5, 7, .4) 38%, transparent 65%);
       transition: opacity .3s ease;
     }
 
     .card-badge {
-      position: absolute; top: 14px; left: 14px; z-index: 4;
-      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
-      padding: .28rem .7rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(6,5,7,.5); backdrop-filter: blur(8px);
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 4;
+      font-size: .62rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: .28rem .7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(6, 5, 7, .5);
+      backdrop-filter: blur(8px);
       color: var(--ink);
     }
 
     .card-info {
-      position: absolute; bottom: 0; left: 0; right: 0; z-index: 4;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 4;
       padding: 1.1rem 1.1rem 1rem;
     }
+
     .card-brand {
-      font-size: .65rem; letter-spacing: .24em; text-transform: uppercase;
-      color: var(--lilac); margin-bottom: .3rem;
-    }
-    .card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem; font-weight: 600; color: #fff; line-height: 1.2;
+      font-size: .65rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--lilac);
       margin-bottom: .3rem;
     }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: .3rem;
+    }
+
     .card-desc {
-      font-size: .75rem; color: rgba(255,255,255,.55); line-height: 1.5;
-      max-height: 0; overflow: hidden; opacity: 0;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .55);
+      line-height: 1.5;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
       transition: max-height .35s ease, opacity .3s ease;
     }
-    .campaign-card:hover .card-desc { max-height: 80px; opacity: 1; }
+
+    .campaign-card:hover .card-desc {
+      max-height: 80px;
+      opacity: 1;
+    }
 
     /* ── HERO FEATURE CARD (full-width) ── */
-    .card-hero .media .media-inner { padding-bottom: 72%; }
-    @media(max-width:767px) { .card-hero .media .media-inner { padding-bottom: 110%; } }
+    .card-hero .media .media-inner {
+      padding-bottom: 72%;
+    }
+
+    @media(max-width:767px) {
+      .card-hero .media .media-inner {
+        padding-bottom: 110%;
+      }
+    }
 
     /* ── STANDARD CARDS ── */
-    .card-std .media .media-inner { padding-bottom: 115%; }
-    @media(max-width:767px) { .card-std .media .media-inner { padding-bottom: 110%; } }
+    .card-std .media .media-inner {
+      padding-bottom: 115%;
+    }
+
+    @media(max-width:767px) {
+      .card-std .media .media-inner {
+        padding-bottom: 110%;
+      }
+    }
 
     /* ── WIDE CARD (2-col span) ── */
-    .card-wide .media .media-inner { padding-bottom: 56%; }
+    .card-wide .media .media-inner {
+      padding-bottom: 56%;
+    }
 
     /* ── COMPACT CARD ── */
-    .card-compact .media .media-inner { padding-bottom: 75%; }
-    @media(max-width:767px) { .card-compact .media .media-inner { padding-bottom: 95%; } }
+    .card-compact .media .media-inner {
+      padding-bottom: 75%;
+    }
+
+    @media(max-width:767px) {
+      .card-compact .media .media-inner {
+        padding-bottom: 95%;
+      }
+    }
 
     /* ── LOOKBOOK CINEMATIC SCROLL DECK ── */
     .lb-scroll-outer {
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+
     .lb-scroll-outer::before,
     .lb-scroll-outer::after {
-      content: ""; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 10; pointer-events: none;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 10;
+      pointer-events: none;
     }
-    .lb-scroll-outer::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
-    .lb-scroll-outer::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+
+    .lb-scroll-outer::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg), transparent);
+    }
+
+    .lb-scroll-outer::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg), transparent);
+    }
 
     .lb-track {
-      display: flex; gap: 20px;
+      display: flex;
+      gap: 20px;
       padding: 44px 64px 56px;
-      overflow-x: auto; overflow-y: visible;
+      overflow-x: auto;
+      overflow-y: visible;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      cursor: grab; user-select: none;
+      cursor: grab;
+      user-select: none;
       scrollbar-width: none;
     }
-    .lb-track:active { cursor: grabbing; }
-    .lb-track::-webkit-scrollbar { display: none; }
+
+    .lb-track:active {
+      cursor: grabbing;
+    }
+
+    .lb-track::-webkit-scrollbar {
+      display: none;
+    }
 
     .lb-card {
-      position: relative; flex: 0 0 auto;
+      position: relative;
+      flex: 0 0 auto;
       width: clamp(220px, 28vw, 310px);
-      border-radius: 16px; overflow: hidden;
+      border-radius: 16px;
+      overflow: hidden;
       scroll-snap-align: center;
-      border: 1px solid rgba(255,255,255,.07);
+      border: 1px solid rgba(255, 255, 255, .07);
       background: #0a080d;
-      box-shadow: 0 4px 12px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.4), 0 28px 60px rgba(0,0,0,.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .35), 0 12px 32px rgba(0, 0, 0, .4), 0 28px 60px rgba(0, 0, 0, .3);
       filter: brightness(.78) blur(.5px);
-      transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .45s ease, filter .45s ease, border-color .3s ease;
+      transition: transform .45s cubic-bezier(.2, .9, .2, 1), box-shadow .45s ease, filter .45s ease, border-color .3s ease;
       transform-origin: bottom center;
     }
-    .lb-card:nth-child(odd)  { transform: rotate(-1.4deg) translateY(8px); }
-    .lb-card:nth-child(even) { transform: rotate(1.2deg)  translateY(2px); }
-    .lb-card:nth-child(3n)   { transform: rotate(-0.6deg) translateY(12px); }
 
-    .lb-card:hover, .lb-card.lb-active {
+    .lb-card:nth-child(odd) {
+      transform: rotate(-1.4deg) translateY(8px);
+    }
+
+    .lb-card:nth-child(even) {
+      transform: rotate(1.2deg) translateY(2px);
+    }
+
+    .lb-card:nth-child(3n) {
+      transform: rotate(-0.6deg) translateY(12px);
+    }
+
+    .lb-card:hover,
+    .lb-card.lb-active {
       transform: rotate(0deg) translateY(-16px) scale(1.05) !important;
       filter: brightness(1) blur(0px);
-      border-color: rgba(205,181,255,.3);
-      box-shadow: 0 6px 16px rgba(0,0,0,.35), 0 20px 48px rgba(0,0,0,.55), 0 36px 80px rgba(205,181,255,.14);
+      border-color: rgba(205, 181, 255, .3);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .35), 0 20px 48px rgba(0, 0, 0, .55), 0 36px 80px rgba(205, 181, 255, .14);
       z-index: 10;
     }
 
     .lb-card img {
-      display: block; width: 100%; aspect-ratio: 3/4;
+      display: block;
+      width: 100%;
+      aspect-ratio: 3/4;
       object-fit: cover;
-      transition: transform .5s cubic-bezier(.2,.9,.2,1);
+      transition: transform .5s cubic-bezier(.2, .9, .2, 1);
     }
-    .lb-card:hover img { transform: scale(1.04); }
+
+    .lb-card:hover img {
+      transform: scale(1.04);
+    }
 
     .lb-card-overlay {
-      position: absolute; inset: 0; pointer-events: none;
-      background: linear-gradient(to top, rgba(6,5,7,.9) 0%, rgba(6,5,7,.18) 45%, transparent 68%);
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(6, 5, 7, .9) 0%, rgba(6, 5, 7, .18) 45%, transparent 68%);
     }
+
     .lb-card-info {
-      position: absolute; bottom: 0; left: 0; right: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       padding: .9rem 1rem .85rem;
     }
+
     .lb-card-num {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: .6rem; letter-spacing: .32em;
-      color: var(--lilac); opacity: .85; display: block; margin-bottom: .18rem;
+      font-size: .6rem;
+      letter-spacing: .32em;
+      color: var(--lilac);
+      opacity: .85;
+      display: block;
+      margin-bottom: .18rem;
     }
+
     .lb-card-label {
       font-family: 'Cormorant Garamond', serif;
-      font-size: .95rem; font-style: italic; color: rgba(255,255,255,.9); line-height: 1.3;
+      font-size: .95rem;
+      font-style: italic;
+      color: rgba(255, 255, 255, .9);
+      line-height: 1.3;
     }
 
     .lb-card.lb-wide {
       width: clamp(300px, 42vw, 500px);
     }
-    .lb-card.lb-wide img { aspect-ratio: 4/3; object-position: center 30%; }
+
+    .lb-card.lb-wide img {
+      aspect-ratio: 4/3;
+      object-position: center 30%;
+    }
 
     .lb-dots {
-      display: flex; justify-content: center; gap: 6px; padding-bottom: .8rem;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding-bottom: .8rem;
     }
+
     .lb-dot {
-      width: 24px; height: 2px; border-radius: 2px;
-      background: rgba(255,255,255,.14); cursor: pointer;
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, .14);
+      cursor: pointer;
       transition: background .3s ease, width .3s ease;
     }
-    .lb-dot.active { background: var(--lilac); width: 38px; }
+
+    .lb-dot.active {
+      background: var(--lilac);
+      width: 38px;
+    }
 
     @media(max-width:639px) {
-      .lb-track { padding: 32px 22px 48px; gap: 14px; }
-      .lb-card { width: clamp(190px, 66vw, 252px); }
-      .lb-card.lb-wide { width: clamp(260px, 80vw, 330px); }
+      .lb-track {
+        padding: 32px 22px 48px;
+        gap: 14px;
+      }
+
+      .lb-card {
+        width: clamp(190px, 66vw, 252px);
+      }
+
+      .lb-card.lb-wide {
+        width: clamp(260px, 80vw, 330px);
+      }
+
       .lb-scroll-outer::before,
-      .lb-scroll-outer::after { width: 24px; }
+      .lb-scroll-outer::after {
+        width: 24px;
+      }
     }
 
     /* ── FILM CARDS ── */
     .film-card {
-      position: relative; border-radius: 12px; overflow: hidden;
-      background: #08070a; border: 1px solid rgba(255,255,255,.07);
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #08070a;
+      border: 1px solid rgba(255, 255, 255, .07);
       transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
     }
+
     .film-card:hover {
-      border-color: rgba(205,181,255,.25);
+      border-color: rgba(205, 181, 255, .25);
       transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(0,0,0,.5);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, .5);
     }
+
     .film-card img {
-      width: 100%; object-fit: cover; display: block;
-      transition: transform .5s cubic-bezier(.2,.9,.2,1);
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s cubic-bezier(.2, .9, .2, 1);
     }
-    .film-card:hover img { transform: scale(1.04); }
+
+    .film-card:hover img {
+      transform: scale(1.04);
+    }
+
     .film-meta {
       padding: .9rem 1rem .85rem;
-      border-top: 1px solid rgba(255,255,255,.07);
+      border-top: 1px solid rgba(255, 255, 255, .07);
     }
+
     .film-chip {
       display: inline-block;
-      font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
-      padding: .2rem .55rem; border-radius: 999px;
-      border: 1px solid rgba(205,181,255,.3); color: var(--lilac);
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(205, 181, 255, .3);
+      color: var(--lilac);
     }
 
     /* ── COMMERCIAL EMBED ── */
     .embed-card {
-      border: 1px solid rgba(255,255,255,.08); border-radius: 16px;
-      overflow: hidden; background: #000;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
       transition: border-color .3s ease, box-shadow .3s ease;
     }
+
     .embed-card:hover {
-      border-color: rgba(205,181,255,.25);
-      box-shadow: 0 16px 48px rgba(0,0,0,.5);
+      border-color: rgba(205, 181, 255, .25);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .5);
     }
+
     .embed-meta {
       padding: .85rem 1rem;
-      border-top: 1px solid rgba(255,255,255,.07);
-      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, .07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     /* ── CTA STRIP ── */
     .cta-strip {
-      border: 1px solid rgba(255,255,255,.07); border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, .07);
+      border-radius: 16px;
       padding: 2.5rem 2rem;
-      background: linear-gradient(135deg, rgba(205,181,255,.04), rgba(255,255,255,.01));
-      display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+      background: linear-gradient(135deg, rgba(205, 181, 255, .04), rgba(255, 255, 255, .01));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
+
     .cta-strip-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(28px, 4vw, 48px); letter-spacing: .04em; line-height: 1;
+      font-size: clamp(28px, 4vw, 48px);
+      letter-spacing: .04em;
+      line-height: 1;
       color: var(--ink);
     }
+
     .cta-strip-sub {
-      font-family: 'Cormorant Garamond', serif; font-style: italic;
-      font-size: 1.05rem; color: var(--muted); margin-top: .3rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-top: .3rem;
     }
 
     /* ── SCROLL REVEALS ── */
-    .r { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.9,.2,1); }
-    .r.in { opacity: 1; transform: none; }
-    .r-l { opacity: 0; transform: translateX(-30px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
-    .r-l.in { opacity: 1; transform: none; }
-    .r-r { opacity: 0; transform: translateX(30px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
-    .r-r.in { opacity: 1; transform: none; }
+    .r {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .8s ease, transform .8s cubic-bezier(.2, .9, .2, 1);
+    }
+
+    .r.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .r-l {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity .7s ease, transform .7s cubic-bezier(.2, .9, .2, 1);
+    }
+
+    .r-l.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .r-r {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity .7s ease, transform .7s cubic-bezier(.2, .9, .2, 1);
+    }
+
+    .r-r.in {
+      opacity: 1;
+      transform: none;
+    }
 
     /* stagger delays */
-    .d1 { transition-delay: .05s; }
-    .d2 { transition-delay: .12s; }
-    .d3 { transition-delay: .19s; }
-    .d4 { transition-delay: .26s; }
-    .d5 { transition-delay: .33s; }
-    .d6 { transition-delay: .40s; }
+    .d1 {
+      transition-delay: .05s;
+    }
+
+    .d2 {
+      transition-delay: .12s;
+    }
+
+    .d3 {
+      transition-delay: .19s;
+    }
+
+    .d4 {
+      transition-delay: .26s;
+    }
+
+    .d5 {
+      transition-delay: .33s;
+    }
+
+    .d6 {
+      transition-delay: .40s;
+    }
 
     /* ── FOOTER ── */
     .social a {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 38px; height: 38px; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .12);
       transition: transform .2s, border-color .2s, background .2s;
     }
-    .social a:hover { transform: translateY(-3px); border-color: rgba(205,181,255,.5); background: rgba(205,181,255,.06); }
-    .social svg { width: 17px; height: 17px; }
+
+    .social a:hover {
+      transform: translateY(-3px);
+      border-color: rgba(205, 181, 255, .5);
+      background: rgba(205, 181, 255, .06);
+    }
+
+    .social svg {
+      width: 17px;
+      height: 17px;
+    }
 
     /* Hairline */
-    .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.09), transparent); }
+    .hairline {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .09), transparent);
+    }
 
 
     /* ══ MOBILE GRID FIXES ══ */
     @media(max-width:639px) {
-      .grid.grid-cols-1.lg\:grid-cols-3 > .campaign-card,
-      .grid.grid-cols-1.lg\:grid-cols-3 > a.campaign-card {
+
+      .grid.grid-cols-1.lg\:grid-cols-3>.campaign-card,
+      .grid.grid-cols-1.lg\:grid-cols-3>a.campaign-card {
         grid-column: span 1 !important;
       }
+
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.75rem !important;
       }
+
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 .card-compact .media .media-inner {
         padding-bottom: 110% !important;
       }
+
       .grid.grid-cols-1.sm\:grid-cols-3 {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.75rem !important;
       }
-      .grid.grid-cols-1.sm\:grid-cols-3 > :last-child {
+
+      .grid.grid-cols-1.sm\:grid-cols-3> :last-child {
         grid-column: span 2 !important;
       }
+
       .grid.grid-cols-1.sm\:grid-cols-3 .card-compact .media .media-inner {
         padding-bottom: 80% !important;
       }
+
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 {
         grid-template-columns: 1fr !important;
       }
+
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 .card-std .media .media-inner {
         padding-bottom: 95% !important;
       }
-      .section-num { font-size: 56px !important; }
-      .section-label { gap: .7rem !important; margin-bottom: 1.5rem !important; }
-      .cta-strip { padding: 1.6rem 1.2rem !important; }
-      .hero-stats { gap: 1.4rem !important; }
+
+      .section-num {
+        font-size: 56px !important;
+      }
+
+      .section-label {
+        gap: .7rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+
+      .cta-strip {
+        padding: 1.6rem 1.2rem !important;
+      }
+
+      .hero-stats {
+        gap: 1.4rem !important;
+      }
     }
 
     @media(min-width:640px) and (max-width:767px) {
       .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 .card-std .media .media-inner {
         padding-bottom: 105% !important;
       }
-      .card-hero .media .media-inner { padding-bottom: 85% !important; }
+
+      .card-hero .media .media-inner {
+        padding-bottom: 85% !important;
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
-      .r, .r-l, .r-r { opacity: 1 !important; transform: none !important; transition: none !important; }
-      .campaign-card:hover { transform: none; }
-      .film-card:hover { transform: none; }
+
+      .r,
+      .r-l,
+      .r-r {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      .campaign-card:hover {
+        transform: none;
+      }
+
+      .film-card:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ═══ NAV ═══ -->
-<nav class="site-nav" role="navigation" aria-label="Primary">
-  <div class="logo">
-    <a href="index.html"><img src="img/Logo2.png" alt="KOYIN" loading="eager"></a>
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="thestory.html">His Story</a>
-    <a href="collaborate.html" class="active">Works</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="flex items-center gap-2">
-    <a href="contact.html" class="btn btn-brand hidden lg:inline-flex" style="font-size:.68rem; padding:.5rem 1.1rem;">Book Koyin</a>
-    <button id="navToggle" class="burger p-2 rounded-md border border-white/10 hover:border-white/25">
-      <span class="sr-only">Menu</span>
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </button>
-  </div>
-</nav>
-
-<!-- Mobile menu -->
-<div id="mobileMenu" class="mobile-menu">
-  <div class="h-full max-w-[640px] mx-auto px-6 flex flex-col">
-    <div class="flex items-center justify-between py-5">
-      <img src="img/Logo2.png" alt="KOYIN" class="h-8">
-      <button id="navClose" class="p-2 rounded-md border border-white/10">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+  <!-- ═══ NAV ═══ -->
+  <nav class="site-nav" role="navigation" aria-label="Primary">
+    <div class="logo">
+      <a href="index.html"><img src="img/Logo2.png" alt="KOYIN" loading="eager"></a>
     </div>
-    <div class="grow flex flex-col justify-center gap-0">
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="thestory.html">His Story</a>
-      <a href="collaborate.html" class="active" style="color:var(--lilac)">Works</a>
+      <a href="collaborate.html" class="active">Works</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="pb-8 flex flex-col gap-3">
-      <a href="contact.html" class="btn btn-brand w-full justify-center">Book Koyin</a>
-      <div class="text-center micro" style="color:var(--lilac)">© KOYIN SANUSI</div>
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn btn-brand hidden lg:inline-flex"
+        style="font-size:.68rem; padding:.5rem 1.1rem;">Book Koyin</a>
+      <button id="navToggle" class="burger p-2 rounded-md border border-white/10 hover:border-white/25">
+        <span class="sr-only">Menu</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="h-full max-w-[640px] mx-auto px-6 flex flex-col">
+      <div class="flex items-center justify-between py-5">
+        <img src="img/Logo2.png" alt="KOYIN" class="h-8">
+        <button id="navClose" class="p-2 rounded-md border border-white/10">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="grow flex flex-col justify-center gap-0">
+        <a href="index.html">Home</a>
+        <a href="thestory.html">His Story</a>
+        <a href="collaborate.html" class="active" style="color:var(--lilac)">Works</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="pb-8 flex flex-col gap-3">
+        <a href="contact.html" class="btn btn-brand w-full justify-center">Book Koyin</a>
+        <div class="text-center micro" style="color:var(--lilac)">© KOYIN SANUSI</div>
+      </div>
     </div>
   </div>
-</div>
 
 
-<!-- ═══ HERO ═══ -->
-<header class="hero" id="heroTop">
-  <div class="hero-media">
-    <img src="img/nav.jpg" alt="Koyin Works" />
-  </div>
-  <div class="hero-bg-text">WORKS</div>
+  <!-- ═══ HERO ═══ -->
+  <header class="hero" id="heroTop">
+    <div class="hero-media">
+      <img src="img/nav.jpg" alt="Koyin Works" />
+    </div>
+    <div class="hero-bg-text">WORKS</div>
 
-  <div class="hero-inner">
-    <div class="hero-kicker r">The Archive</div>
-    <h1 class="hero-title r d1">
-      Brand<br><em>Campaigns,</em><br>Film & Editorial
-    </h1>
-    <p class="hero-desc r d2">\One face. A body of work built on precision, not luck.</p>
-
-
-    <nav class="hero-nav-pills r d4" aria-label="Jump to section">
-      <a class="pill" href="#brand-campaigns">Brand Campaigns</a>
-      <a class="pill" href="#lookbook">Lookbook</a>
-      <a class="pill" href="#film">Film</a>
-      <a class="pill" href="#music">Music</a>
-    </nav>
-  </div>
-</header>
+    <div class="hero-inner">
+      <div class="hero-kicker r">The Archive</div>
+      <h1 class="hero-title r d1">
+        Brand<br><em>Campaigns,</em><br>Film & Editorial
+      </h1>
+      <p class="hero-desc r d2">\One face. A body of work built on precision, not luck.</p>
 
 
-<!-- ═══════════════════════════════════════════
+      <nav class="hero-nav-pills r d4" aria-label="Jump to section">
+        <a class="pill" href="#brand-campaigns">Brand Campaigns</a>
+        <a class="pill" href="#lookbook">Lookbook</a>
+        <a class="pill" href="#film">Film</a>
+        <a class="pill" href="#music">Music</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
      SECTION 01 BRAND CAMPAIGNS
 ════════════════════════════════════════════ -->
-<div class="section-divider" id="brand-campaigns"></div>
+  <div class="section-divider" id="brand-campaigns"></div>
 
-<div class="section-wrap">
-  <div class="section-label r">
-    <span class="section-num">01</span>
-    <div class="section-title-block">
-      <div class="section-title">Brand Campaigns</div>
-      <div class="section-sub">Official partnerships & ambassador deals</div>
-    </div>
-  </div>
-
-  <!-- ROW A: Guinness (hero wide) + Betking stacked -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5">
-
-    <!-- Guinness hero feature -->
-    <a href="https://www.guinness.com" target="_blank" rel="noopener"
-       class="campaign-card card-hero lg:col-span-2 block r">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/guinness_poster.jpg">
-            <source src="videos/guinness1.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/guinness_poster.jpg" alt="Guinness Africa Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#1a0a00,#3d1a00)'"/>
-        </div>
-      </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Brand Ambassador</span>
-      <div class="card-info">
-        <div class="card-brand">Guinness Africa</div>
-        <div class="card-title">Made of More</div>
-        <p class="card-desc">Official Guinness Africa brand ambassador fronting campaigns that speak directly to a generation that runs on ambition and authenticity.</p>
-      </div>
-    </a>
-
-    <!-- BetKing stacked tall -->
-    <a href="https://www.betking.com" target="_blank" rel="noopener"
-       class="campaign-card card-std block r d2">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/betking_poster.jpg">
-            <source src="videos/Betking.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/betking_poster.jpg" alt="BetKing Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#08001a,#2a0060)'"/>
-        </div>
-      </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Partnership</span>
-      <div class="card-info">
-        <div class="card-brand">BetKing Nigeria</div>
-        <div class="card-title">King Energy</div>
-        <p class="card-desc">Official brand partner for BetKing bringing cultural reach to Nigeria's biggest sports entertainment platform.</p>
-      </div>
-    </a>
-  </div>
-
-  <!-- ROW B: Oraimo + Sonmade + MTN three equal columns -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-
-    <div class="campaign-card card-std r">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/oraimo_poster.jpg">
-            <source src="videos/oraimo.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/oraimo_poster.jpg" alt="Oraimo Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#001a10,#004d30)'"/>
-        </div>
-      </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Campaign</span>
-      <div class="card-info">
-        <div class="card-brand">Oraimo</div>
-        <div class="card-title">Find Your Rhythm</div>
-        <p class="card-desc">Featured in Oraimo's African market push connecting the brand to a generation that lives through sound and motion.</p>
+  <div class="section-wrap">
+    <div class="section-label r">
+      <span class="section-num">01</span>
+      <div class="section-title-block">
+        <div class="section-title">Brand Campaigns</div>
+        <div class="section-sub">Official partnerships & ambassador deals</div>
       </div>
     </div>
 
-    <div class="campaign-card card-std r d2">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/sonmade_poster.jpg">
-            <source src="videos/sonmade.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/sonmade_poster.jpg" alt="Sonmade Luxury Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#0c0a18,#1e1235)'"/>
+    <!-- ROW A: Guinness (hero wide) + Betking stacked -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5">
+
+      <!-- Guinness hero feature -->
+      <a href="https://www.guinness.com" target="_blank" rel="noopener"
+        class="campaign-card card-hero lg:col-span-2 block r">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/guinness_poster.jpg">
+              <source src="videos/guinness1.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/guinness_poster.jpg" alt="Guinness Africa Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#1a0a00,#3d1a00)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Brand Ambassador</span>
+        <div class="card-info">
+          <div class="card-brand">Guinness Africa</div>
+          <div class="card-title">Made of More</div>
+          <p class="card-desc">Official Guinness Africa brand ambassador fronting campaigns that speak directly to a
+            generation that runs on ambition and authenticity.</p>
+        </div>
+      </a>
+
+      <!-- BetKing stacked tall -->
+      <a href="https://www.betking.com" target="_blank" rel="noopener" class="campaign-card card-std block r d2">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/betking_poster.jpg">
+              <source src="videos/Betking.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/betking_poster.jpg" alt="BetKing Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#08001a,#2a0060)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Partnership</span>
+        <div class="card-info">
+          <div class="card-brand">BetKing Nigeria</div>
+          <div class="card-title">King Energy</div>
+          <p class="card-desc">Official brand partner for BetKing bringing cultural reach to Nigeria's biggest sports
+            entertainment platform.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- ROW B: Oraimo + Sonmade + MTN three equal columns -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+
+      <div class="campaign-card card-std r">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/oraimo_poster.jpg">
+              <source src="videos/oraimo.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/oraimo_poster.jpg" alt="Oraimo Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#001a10,#004d30)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Campaign</span>
+        <div class="card-info">
+          <div class="card-brand">Oraimo</div>
+          <div class="card-title">Find Your Rhythm</div>
+          <p class="card-desc">Featured in Oraimo's African market push connecting the brand to a generation that lives
+            through sound and motion.</p>
         </div>
       </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Official Ambassador</span>
-      <div class="card-info">
-        <div class="card-brand">Sonmade Luxury</div>
-        <div class="card-title">Dressed for Legacy</div>
-        <p class="card-desc">Official Sonmade ambassador embodying Nigerian craftsmanship meeting global style codes.</p>
+
+      <div class="campaign-card card-std r d2">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/sonmade_poster.jpg">
+              <source src="videos/sonmade.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/sonmade_poster.jpg" alt="Sonmade Luxury Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#0c0a18,#1e1235)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Official Ambassador</span>
+        <div class="card-info">
+          <div class="card-brand">Sonmade Luxury</div>
+          <div class="card-title">Dressed for Legacy</div>
+          <p class="card-desc">Official Sonmade ambassador embodying Nigerian craftsmanship meeting global style codes.
+          </p>
+        </div>
+      </div>
+
+      <div class="campaign-card card-std r d3">
+        <div class="media">
+          <div class="media-inner">
+            <img class="poster show" src="img/mtn.jpeg" alt="MTN Nigeria Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#1a1200,#4d3800)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Red Carpet Host</span>
+        <div class="card-info">
+          <div class="card-brand">MTN Nigeria</div>
+          <div class="card-title">On the Carpet</div>
+          <p class="card-desc">Red carpet anchor for MTN Nigeria commanding the room on one of the country's
+            most-watched platforms.</p>
+        </div>
       </div>
     </div>
 
-    <div class="campaign-card card-std r d3">
-      <div class="media">
-        <div class="media-inner">
-          <img class="poster show" src="img/mtn.jpeg" alt="MTN Nigeria Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#1a1200,#4d3800)'"/>
+    <!-- ROW C: Poco + American Cola + Top Cafe + Spotify quad grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
+
+      <div class="campaign-card card-compact r">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/poco_poster.jpg">
+              <source src="videos/POCO.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/poco_poster.jpg" alt="Poco Nigeria Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#001018,#00304a)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Campaign</span>
+        <div class="card-info">
+          <div class="card-brand">Poco Nigeria</div>
+          <div class="card-title">Tech Meets Culture</div>
+          <p class="card-desc">The face Poco Nigeria chose to carry its brand into the culture.</p>
         </div>
       </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Red Carpet Host</span>
-      <div class="card-info">
-        <div class="card-brand">MTN Nigeria</div>
-        <div class="card-title">On the Carpet</div>
-        <p class="card-desc">Red carpet anchor for MTN Nigeria commanding the room on one of the country's most-watched platforms.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- ROW C: Poco + American Cola + Top Cafe + Spotify quad grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
-
-    <div class="campaign-card card-compact r">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/poco_poster.jpg">
-            <source src="videos/POCO.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/poco_poster.jpg" alt="Poco Nigeria Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#001018,#00304a)'"/>
+      <div class="campaign-card card-compact r d2">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/americancola_poster.jpg">
+              <source src="videos/America cola.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/americancola_poster.jpg" alt="American Cola Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#1a0000,#4d0000)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Campaign</span>
+        <div class="card-info">
+          <div class="card-brand">American Cola</div>
+          <div class="card-title">Bold Taste, Bold Face</div>
+          <p class="card-desc">Fronting American Cola's Nigerian campaign with presence and energy.</p>
         </div>
       </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Campaign</span>
-      <div class="card-info">
-        <div class="card-brand">Poco Nigeria</div>
-        <div class="card-title">Tech Meets Culture</div>
-        <p class="card-desc">The face Poco Nigeria chose to carry its brand into the culture.</p>
-      </div>
-    </div>
 
-    <div class="campaign-card card-compact r d2">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/americancola_poster.jpg">
-            <source src="videos/America cola.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/americancola_poster.jpg" alt="American Cola Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#1a0000,#4d0000)'"/>
+      <div class="campaign-card card-compact r d3">
+        <div class="media">
+          <div class="media-inner">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/topcafe_poster.jpg">
+              <source src="videos/topcafe.mp4" type="video/mp4" />
+            </video>
+            <img class="poster" src="img/topcafe_poster.jpg" alt="Top Cafe Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#0e0800,#3a2200)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Campaign</span>
+        <div class="card-info">
+          <div class="card-brand">Top Cafe</div>
+          <div class="card-title">Every Sip, A Moment</div>
+          <p class="card-desc">Brand campaign for Top Cafe warm, grounded, and distinctly Nigerian.</p>
         </div>
       </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Campaign</span>
-      <div class="card-info">
-        <div class="card-brand">American Cola</div>
-        <div class="card-title">Bold Taste, Bold Face</div>
-        <p class="card-desc">Fronting American Cola's Nigerian campaign with presence and energy.</p>
-      </div>
-    </div>
 
-    <div class="campaign-card card-compact r d3">
-      <div class="media">
-        <div class="media-inner">
-          <video autoplay muted loop playsinline preload="metadata" poster="img/topcafe_poster.jpg">
-            <source src="videos/topcafe.mp4" type="video/mp4"/>
-          </video>
-          <img class="poster" src="img/topcafe_poster.jpg" alt="Top Cafe Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#0e0800,#3a2200)'"/>
-        </div>
-      </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Campaign</span>
-      <div class="card-info">
-        <div class="card-brand">Top Cafe</div>
-        <div class="card-title">Every Sip, A Moment</div>
-        <p class="card-desc">Brand campaign for Top Cafe warm, grounded, and distinctly Nigerian.</p>
-      </div>
-    </div>
 
-  
     </div>
   </div>
 
@@ -797,8 +1308,8 @@
     <div class="campaign-card card-compact r">
       <div class="media">
         <div class="media-inner" style="padding-bottom:65%;">
-           <video autoplay muted loop playsinline preload="metadata" poster="img/topcafe_poster.jpg">
-            <source src="videos/flyingfish.mp4" type="video/mp4"/>
+          <video autoplay muted loop playsinline preload="metadata" poster="img/topcafe_poster.jpg">
+            <source src="videos/flyingfish.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -821,7 +1332,8 @@
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="card-overlay" style="pointer-events:none; opacity:0;"></div>
-      <div style="padding:.9rem 1.1rem; border-top:1px solid rgba(255,255,255,.07); display:flex; align-items:center; justify-content:space-between;">
+      <div
+        style="padding:.9rem 1.1rem; border-top:1px solid rgba(255,255,255,.07); display:flex; align-items:center; justify-content:space-between;">
         <div>
           <div class="card-brand" style="margin-bottom:.2rem;">Coca-Cola</div>
           <div class="card-title" style="font-size:1.1rem;">The Official Commercial</div>
@@ -833,368 +1345,393 @@
   </div>
 
   </div>
-</div>
+  </div>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      SECTION 03 LOOKBOOK
 ════════════════════════════════════════════ -->
-<div class="section-divider" id="lookbook"></div>
+  <div class="section-divider" id="lookbook"></div>
 
-<div class="section-wrap" style="padding-bottom:1.5rem;">
-  <div class="section-label r">
-    <span class="section-num">02</span>
-    <div class="section-title-block">
-      <div class="section-title">Lookbook</div>
-      <div class="section-sub">Editorial &amp; campaign frames</div>
+  <div class="section-wrap" style="padding-bottom:1.5rem;">
+    <div class="section-label r">
+      <span class="section-num">02</span>
+      <div class="section-title-block">
+        <div class="section-title">Lookbook</div>
+        <div class="section-sub">Editorial &amp; campaign frames</div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="lb-scroll-outer r">
-  <div class="lb-track" id="lbTrack">
+  <div class="lb-scroll-outer r">
+    <div class="lb-track" id="lbTrack">
 
-    <div class="lb-card">
-      <img src="img/5.jpg" alt="Editorial Look 01">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">01</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/5.jpg" alt="Editorial Look 01">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">01</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/cb1.jpeg" alt="Editorial Look 02">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">02</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/cb1.jpeg" alt="Editorial Look 02">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">02</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/a.jpg" alt="Editorial Look 03">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">03</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/a.jpg" alt="Editorial Look 03">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">03</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
 
-    <div class="lb-card">
-      <img src="img/d2.jpeg" alt="Editorial Look 04">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">04</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/d2.jpeg" alt="Editorial Look 04">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">04</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/b.jpg" alt="Editorial Look 05">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">05</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/b.jpg" alt="Editorial Look 05">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">05</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/d3.jpeg" alt="Editorial Look 06">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">06</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/d3.jpeg" alt="Editorial Look 06">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">06</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/g1.jpg" alt="Editorial Look 07">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">07</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/g1.jpg" alt="Editorial Look 07">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">07</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/9.jpg" alt="Editorial Look 08">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">08</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/9.jpg" alt="Editorial Look 08">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">08</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
-    <div class="lb-card">
-      <img src="img/nav.jpg" alt="Editorial Look 09">
-      <div class="lb-card-overlay"></div>
-      <div class="lb-card-info">
-        <span class="lb-card-num">09</span>
-        <span class="lb-card-label">Editorial Look</span>
+      <div class="lb-card">
+        <img src="img/nav.jpg" alt="Editorial Look 09">
+        <div class="lb-card-overlay"></div>
+        <div class="lb-card-info">
+          <span class="lb-card-num">09</span>
+          <span class="lb-card-label">Editorial Look</span>
+        </div>
       </div>
-    </div>
 
+    </div>
+    <div class="lb-dots" id="lbDots"></div>
   </div>
-  <div class="lb-dots" id="lbDots"></div>
-</div>
 
-<div style="height:clamp(3rem,5vh,5rem);"></div>
+  <div style="height:clamp(3rem,5vh,5rem);"></div>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      SECTION 04 FILMOGRAPHY
 ════════════════════════════════════════════ -->
-<div class="section-divider" id="film"></div>
+  <div class="section-divider" id="film"></div>
 
-<div class="section-wrap">
-  <div class="section-label r">
-    <span class="section-num">03</span>
-    <div class="section-title-block">
-      <div class="section-title">Filmography</div>
-      <div class="section-sub">Feature films &amp; screen credits</div>
+  <div class="section-wrap">
+    <div class="section-label r">
+      <span class="section-num">03</span>
+      <div class="section-title-block">
+        <div class="section-title">Filmography</div>
+        <div class="section-sub">Feature films &amp; screen credits</div>
+      </div>
     </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+
+      <div class="film-card r">
+        <div class="overflow-hidden" style="aspect-ratio:2/3;">
+          <img src="img/m1.jpg" alt="Students on the Island (2024) poster" loading="lazy" style="aspect-ratio:2/3;">
+        </div>
+        <div class="film-meta">
+          <div class="flex items-center justify-between mb-1">
+            <span class="serif" style="font-size:15px; color:var(--ink);">Students on the Island</span>
+            <span class="film-chip">IMDb</span>
+          </div>
+          <p class="micro">2024 · Feature Role credited</p>
+        </div>
+      </div>
+
+      <div class="film-card r d2">
+        <div class="overflow-hidden" style="aspect-ratio:2/3;">
+          <img src="img/m2.jpg" alt="Sent from Above (2024) poster" loading="lazy" style="aspect-ratio:2/3;">
+        </div>
+        <div class="film-meta">
+          <div class="flex items-center justify-between mb-1">
+            <span class="serif" style="font-size:15px; color:var(--ink);">Sent from Above</span>
+            <span class="film-chip">IMDb</span>
+          </div>
+          <p class="micro">2024 · Feature Role credited</p>
+        </div>
+      </div>
+
+      <div class="film-card r d3">
+        <div class="overflow-hidden" style="aspect-ratio:2/3;">
+          <img src="img/m3.jpg" alt="Heart of the Poor poster" loading="lazy" style="aspect-ratio:2/3;">
+        </div>
+        <div class="film-meta">
+          <div class="flex items-center justify-between mb-1">
+            <span class="serif" style="font-size:15px; color:var(--ink);">Heart of the Poor</span>
+            <span class="film-chip">Feature</span>
+          </div>
+          <p class="micro">Drama · Cast role</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="micro mt-4 r" style="margin-top:1.2rem;">First two titles listed on IMDb.</p>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
 
-    <div class="film-card r">
-      <div class="overflow-hidden" style="aspect-ratio:2/3;">
-        <img src="img/m1.jpg" alt="Students on the Island (2024) poster" loading="lazy" style="aspect-ratio:2/3;">
-      </div>
-      <div class="film-meta">
-        <div class="flex items-center justify-between mb-1">
-          <span class="serif" style="font-size:15px; color:var(--ink);">Students on the Island</span>
-          <span class="film-chip">IMDb</span>
-        </div>
-        <p class="micro">2024 · Feature Role credited</p>
-      </div>
-    </div>
-
-    <div class="film-card r d2">
-      <div class="overflow-hidden" style="aspect-ratio:2/3;">
-        <img src="img/m2.jpg" alt="Sent from Above (2024) poster" loading="lazy" style="aspect-ratio:2/3;">
-      </div>
-      <div class="film-meta">
-        <div class="flex items-center justify-between mb-1">
-          <span class="serif" style="font-size:15px; color:var(--ink);">Sent from Above</span>
-          <span class="film-chip">IMDb</span>
-        </div>
-        <p class="micro">2024 · Feature Role credited</p>
-      </div>
-    </div>
-
-    <div class="film-card r d3">
-      <div class="overflow-hidden" style="aspect-ratio:2/3;">
-        <img src="img/m3.jpg" alt="Heart of the Poor poster" loading="lazy" style="aspect-ratio:2/3;">
-      </div>
-      <div class="film-meta">
-        <div class="flex items-center justify-between mb-1">
-          <span class="serif" style="font-size:15px; color:var(--ink);">Heart of the Poor</span>
-          <span class="film-chip">Feature</span>
-        </div>
-        <p class="micro">Drama · Cast role</p>
-      </div>
-    </div>
-
-  </div>
-
-  <p class="micro mt-4 r" style="margin-top:1.2rem;">First two titles listed on IMDb.</p>
-</div>
-
-
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      SECTION 05 MUSIC
 ════════════════════════════════════════════ -->
-<div class="section-divider" id="music"></div>
+  <div class="section-divider" id="music"></div>
 
-<div class="section-wrap">
-  <div class="section-label r">
-    <span class="section-num">04</span>
-    <div class="section-title-block">
-      <div class="section-title">Music</div>
-      <div class="section-sub">Studio &amp; stage</div>
+  <div class="section-wrap">
+    <div class="section-label r">
+      <span class="section-num">04</span>
+      <div class="section-title-block">
+        <div class="section-title">Music</div>
+        <div class="section-sub">Studio &amp; stage</div>
+      </div>
     </div>
-  </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
-    <!-- Album art card -->
-    <a href="https://music.apple.com/us/song/girls-geng/1808403313" target="_blank" rel="noopener"
-       class="campaign-card block r" style="border-radius:16px;">
-      <div class="media">
-        <div class="media-inner" style="padding-bottom:100%;">
-          <img class="poster show" src="img/mu.jpg" alt="Girls & Geng Koyin"
-               onerror="this.style.background='linear-gradient(135deg,#0c0018,#260040)'"/>
+      <!-- Album art card -->
+      <a href="https://music.apple.com/us/song/girls-geng/1808403313" target="_blank" rel="noopener"
+        class="campaign-card block r" style="border-radius:16px;">
+        <div class="media">
+          <div class="media-inner" style="padding-bottom:100%;">
+            <img class="poster show" src="img/mu.jpg" alt="Girls & Geng Koyin"
+              onerror="this.style.background='linear-gradient(135deg,#0c0018,#260040)'" />
+          </div>
+        </div>
+        <div class="card-overlay"></div>
+        <span class="card-badge">Single</span>
+        <div class="card-info">
+          <div class="card-brand">Music</div>
+          <div class="card-title">Girls &amp; Geng</div>
+          <p class="card-desc">Available now on Apple Music &amp; Spotify charting and culturally resonant.</p>
+        </div>
+      </a>
+
+      <!-- Track info panel -->
+      <div class="r d2" style="padding: 1rem 0;">
+        <div class="micro mb-3">Latest Release</div>
+        <h3 class="serif"
+          style="font-size:clamp(2rem,5vw,3.5rem); font-weight:600; line-height:1.1; color:var(--ink); margin-bottom:.8rem;">
+          Girls &amp; Geng
+        </h3>
+        <p class="serif"
+          style="font-size:1.05rem; color:var(--muted); line-height:1.6; margin-bottom:1.8rem; font-style:italic;">
+          Studio and stage sound that leads rooms and anchors culture. Koyin doesn't just model and act; he makes music
+          that lands.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:.7rem; margin-bottom:2rem;">
+          <a href="https://music.apple.com/us/song/girls-geng/1808403313" target="_blank" rel="noopener"
+            class="btn btn-brand">Apple Music</a>
+          <a href="https://open.spotify.com" target="_blank" rel="noopener" class="btn btn-ghost">Spotify</a>
+        </div>
+
+        <div style="border-top:1px solid rgba(255,255,255,.07); padding-top:1.2rem;">
+          <div class="micro mb-1">Genre</div>
+          <p style="font-size:.88rem; color:var(--cream);">Afrobeats / Contemporary Nigerian</p>
         </div>
       </div>
-      <div class="card-overlay"></div>
-      <span class="card-badge">Single</span>
-      <div class="card-info">
-        <div class="card-brand">Music</div>
-        <div class="card-title">Girls &amp; Geng</div>
-        <p class="card-desc">Available now on Apple Music &amp; Spotify charting and culturally resonant.</p>
-      </div>
-    </a>
 
-    <!-- Track info panel -->
-    <div class="r d2" style="padding: 1rem 0;">
-      <div class="micro mb-3">Latest Release</div>
-      <h3 class="serif" style="font-size:clamp(2rem,5vw,3.5rem); font-weight:600; line-height:1.1; color:var(--ink); margin-bottom:.8rem;">
-        Girls &amp; Geng
-      </h3>
-      <p class="serif" style="font-size:1.05rem; color:var(--muted); line-height:1.6; margin-bottom:1.8rem; font-style:italic;">
-        Studio and stage sound that leads rooms and anchors culture. Koyin doesn't just model and act; he makes music that lands.
-      </p>
-
-      <div style="display:flex; flex-wrap:wrap; gap:.7rem; margin-bottom:2rem;">
-        <a href="https://music.apple.com/us/song/girls-geng/1808403313" target="_blank" rel="noopener"
-           class="btn btn-brand">Apple Music</a>
-        <a href="https://open.spotify.com" target="_blank" rel="noopener"
-           class="btn btn-ghost">Spotify</a>
-      </div>
-
-      <div style="border-top:1px solid rgba(255,255,255,.07); padding-top:1.2rem;">
-        <div class="micro mb-1">Genre</div>
-        <p style="font-size:.88rem; color:var(--cream);">Afrobeats / Contemporary Nigerian</p>
-      </div>
     </div>
-
   </div>
-</div>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      CTA
 ════════════════════════════════════════════ -->
-<div class="section-wrap" style="padding-top:0;">
-  <div class="cta-strip r">
-    <div>
-      <div class="cta-strip-title">Ready to Work Together?</div>
-      <div class="cta-strip-sub">Include usage, territories and timeline in your brief for accurate quoting.</div>
-    </div>
-    <div style="display:flex; gap:.8rem; flex-wrap:wrap; flex-shrink:0;">
-      <a class="btn btn-brand" href="contact.html">Start Enquiry</a>
-      <a class="btn btn-ghost" href="thestory.html">Who is Koyin?</a>
-    </div>
-  </div>
-</div>
-
-
-<!-- ═══ FOOTER ═══ -->
-<footer class="px-5 py-12" style="max-width:1200px; margin:0 auto;">
-  <div class="hairline" style="margin-bottom:1.5rem;"></div>
-  <div class="flex flex-col md:flex-row items-center justify-between gap-5">
-    <div class="text-center md:text-left">
-      <div class="serif" style="font-size:18px; color:var(--cream);">KOYIN SANUSI</div>
-      <div class="micro mt-1">Not talent. Testament.</div>
-    </div>
-    <div class="social flex items-center gap-3">
-      <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-      </a>
-      <a href="https://x.com/koyin_official?s=21" rel="noopener" aria-label="X">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-8 9 8 11h-6.9l-4.5-6-5.6 6H1l8.6-9.3L1.5 2H8.5l4.1 5.5L18 2Z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z"/></svg>
-      </a>
-      <a href="#" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4z"/></svg>
-      </a>
+  <div class="section-wrap" style="padding-top:0;">
+    <div class="cta-strip r">
+      <div>
+        <div class="cta-strip-title">Ready to Work Together?</div>
+        <div class="cta-strip-sub">Include usage, territories and timeline in your brief for accurate quoting.</div>
+      </div>
+      <div style="display:flex; gap:.8rem; flex-wrap:wrap; flex-shrink:0;">
+        <a class="btn btn-brand" href="contact.html">Start Enquiry</a>
+        <a class="btn btn-ghost" href="thestory.html">Who is Koyin?</a>
+      </div>
     </div>
   </div>
-  <div class="micro text-center md:text-left mt-6">&copy; <span id="yr"></span> Koyin Sanusi</div>
-</footer>
 
+  <footer class="px-5 py-12 relative z-20">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="hairline mb-6"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+        <div class="text-center md:text-left">
+          <div class="serif text-[18px] text-[#e6e1da]">KOYIN SANUSI</div>
+          <div class="micro mt-1">Not talent. Testament.</div>
+        </div>
+        <div class="social flex items-center gap-3">
+          <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" rel="noopener"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://x.com/koyin_official?s=21" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path d="M18 2h3l-8 9 8 11h-6.9l-4.5-6-5.6 6H1l8.6-9.3L1.5 2H8.5l4.1 5.5L18 2Z" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z" />
+            </svg>
+          </a>
+          <a href="#" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="hairline mt-6 mb-4"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-2">
+        <div class="text-center md:text-left micro">&copy; <span id="yr"></span> Koyin Sanusi</div>
+        <div class="micro" style="opacity: 0.4;">
+          Designed &amp; built by
+          <a href="mailto:ayipexfunby@gmail.com"
+            style="opacity: 1; color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+            Funbi Akintade
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script>
-(function(){
-  // Year
-  document.getElementById('yr').textContent = new Date().getFullYear();
+  <script>
+    (function () {
+      // Year
+      document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Mobile nav
-  const navToggle = document.getElementById('navToggle');
-  const navClose  = document.getElementById('navClose');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const openMenu  = () => { mobileMenu.classList.add('open'); document.body.style.overflow='hidden'; navToggle?.setAttribute('aria-expanded','true'); };
-  const closeMenu = () => { mobileMenu.classList.remove('open'); document.body.style.overflow=''; navToggle?.setAttribute('aria-expanded','false'); };
-  navToggle?.addEventListener('click', openMenu);
-  navClose?.addEventListener('click', closeMenu);
-  mobileMenu?.addEventListener('click', e => { if(e.target === mobileMenu || e.target.tagName === 'A') closeMenu(); });
-  window.addEventListener('keydown', e => { if(e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
+      // Mobile nav
+      const navToggle = document.getElementById('navToggle');
+      const navClose = document.getElementById('navClose');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openMenu = () => { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; navToggle?.setAttribute('aria-expanded', 'true'); };
+      const closeMenu = () => { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; navToggle?.setAttribute('aria-expanded', 'false'); };
+      navToggle?.addEventListener('click', openMenu);
+      navClose?.addEventListener('click', closeMenu);
+      mobileMenu?.addEventListener('click', e => { if (e.target === mobileMenu || e.target.tagName === 'A') closeMenu(); });
+      window.addEventListener('keydown', e => { if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
 
-  // Hero slow zoom on load
-  requestAnimationFrame(() => document.getElementById('heroTop')?.classList.add('loaded'));
+      // Hero slow zoom on load
+      requestAnimationFrame(() => document.getElementById('heroTop')?.classList.add('loaded'));
 
-  // Scroll reveals
-  const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  const revEls = [...document.querySelectorAll('.r,.r-l,.r-r')];
-  if(!reduced){
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      // Scroll reveals
+      const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      const revEls = [...document.querySelectorAll('.r,.r-l,.r-r')];
+      if (!reduced) {
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+        revEls.forEach(el => io.observe(el));
+      } else {
+        revEls.forEach(el => el.classList.add('in'));
+      }
+
+      // Campaign card video fallback
+      document.querySelectorAll('.campaign-card .media').forEach(wrap => {
+        const vid = wrap.querySelector('video');
+        const poster = wrap.querySelector('img.poster');
+        if (!vid || !poster) return;
+        const showFallback = () => { vid.style.display = 'none'; poster.classList.add('show'); };
+        vid.addEventListener('error', showFallback, { once: true });
+        const src = vid.querySelector('source');
+        if (src) src.addEventListener('error', () => { vid.load(); showFallback(); }, { once: true });
+        setTimeout(() => { if (vid.readyState === 0) showFallback(); }, 3000);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
-    revEls.forEach(el => io.observe(el));
-  } else {
-    revEls.forEach(el => el.classList.add('in'));
-  }
 
-  // Campaign card video fallback
-  document.querySelectorAll('.campaign-card .media').forEach(wrap => {
-    const vid = wrap.querySelector('video');
-    const poster = wrap.querySelector('img.poster');
-    if(!vid || !poster) return;
-    const showFallback = () => { vid.style.display='none'; poster.classList.add('show'); };
-    vid.addEventListener('error', showFallback, {once:true});
-    const src = vid.querySelector('source');
-    if(src) src.addEventListener('error', () => { vid.load(); showFallback(); }, {once:true});
-    setTimeout(() => { if(vid.readyState === 0) showFallback(); }, 3000);
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const t = document.querySelector(a.getAttribute('href'));
-      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
-    });
-  });
-
-  // ── Lookbook drag scroll + active card + dots ──
-  const lbTrack = document.getElementById('lbTrack');
-  const lbDots  = document.getElementById('lbDots');
-  if(lbTrack){
-    const cards = [...lbTrack.querySelectorAll('.lb-card')];
-    if(lbDots){
-      cards.forEach((_,i) => {
-        const d = document.createElement('div');
-        d.className = 'lb-dot' + (i===0?' active':'');
-        d.addEventListener('click', () => cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}));
-        lbDots.appendChild(d);
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const t = document.querySelector(a.getAttribute('href'));
+          if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+        });
       });
-    }
-    const updateActive = () => {
-      const cx = lbTrack.scrollLeft + lbTrack.offsetWidth/2;
-      let bestIdx=0, bestDist=Infinity;
-      cards.forEach((c,i)=>{ const d=Math.abs(c.offsetLeft+c.offsetWidth/2-cx); if(d<bestDist){bestDist=d;bestIdx=i;} });
-      cards.forEach((c,i)=>c.classList.toggle('lb-active',i===bestIdx));
-      if(lbDots) [...lbDots.querySelectorAll('.lb-dot')].forEach((d,i)=>d.classList.toggle('active',i===bestIdx));
-    };
-    lbTrack.addEventListener('scroll', updateActive, {passive:true});
-    updateActive();
-    let isDown=false, startX, scrollLeft;
-    lbTrack.addEventListener('mousedown', e=>{isDown=true; startX=e.pageX-lbTrack.offsetLeft; scrollLeft=lbTrack.scrollLeft;});
-    lbTrack.addEventListener('mouseleave',()=>isDown=false);
-    lbTrack.addEventListener('mouseup',()=>isDown=false);
-    lbTrack.addEventListener('mousemove',e=>{
-      if(!isDown)return; e.preventDefault();
-      lbTrack.scrollLeft = scrollLeft-(e.pageX-lbTrack.offsetLeft-startX)*1.4;
-    });
-  }
-})();
-</script>
+
+      // ── Lookbook drag scroll + active card + dots ──
+      const lbTrack = document.getElementById('lbTrack');
+      const lbDots = document.getElementById('lbDots');
+      if (lbTrack) {
+        const cards = [...lbTrack.querySelectorAll('.lb-card')];
+        if (lbDots) {
+          cards.forEach((_, i) => {
+            const d = document.createElement('div');
+            d.className = 'lb-dot' + (i === 0 ? ' active' : '');
+            d.addEventListener('click', () => cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }));
+            lbDots.appendChild(d);
+          });
+        }
+        const updateActive = () => {
+          const cx = lbTrack.scrollLeft + lbTrack.offsetWidth / 2;
+          let bestIdx = 0, bestDist = Infinity;
+          cards.forEach((c, i) => { const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - cx); if (d < bestDist) { bestDist = d; bestIdx = i; } });
+          cards.forEach((c, i) => c.classList.toggle('lb-active', i === bestIdx));
+          if (lbDots) [...lbDots.querySelectorAll('.lb-dot')].forEach((d, i) => d.classList.toggle('active', i === bestIdx));
+        };
+        lbTrack.addEventListener('scroll', updateActive, { passive: true });
+        updateActive();
+        let isDown = false, startX, scrollLeft;
+        lbTrack.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - lbTrack.offsetLeft; scrollLeft = lbTrack.scrollLeft; });
+        lbTrack.addEventListener('mouseleave', () => isDown = false);
+        lbTrack.addEventListener('mouseup', () => isDown = false);
+        lbTrack.addEventListener('mousemove', e => {
+          if (!isDown) return; e.preventDefault();
+          lbTrack.scrollLeft = scrollLeft - (e.pageX - lbTrack.offsetLeft - startX) * 1.4;
+        });
+      }
+    })();
+  </script>
 
 </body>
+
 </html>

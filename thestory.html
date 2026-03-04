@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
@@ -11,253 +12,510 @@
 
   <!-- Social cards -->
   <meta property="og:title" content="Koyin Sanusi — Biography, Brand Profile & Career Timeline" />
-  <meta property="og:description" content="BBNaija Season 10 second runner-up. Model, actor, recording artist. Roots, awards, and brand-ready career timeline." />
+  <meta property="og:description"
+    content="BBNaija Season 10 second runner-up. Model, actor, recording artist. Roots, awards, and brand-ready career timeline." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://yourdomain.com/thestory.html" />
   <meta property="og:image" content="https://yourdomain.com/img/4.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Koyin Sanusi — Biography, Brand Profile & Career Timeline" />
-  <meta name="twitter:description" content="BBNaija Season 10 second runner-up. Model, actor, recording artist. Roots, awards, and brand-ready career timeline." />
+  <meta name="twitter:description"
+    content="BBNaija Season 10 second runner-up. Model, actor, recording artist. Roots, awards, and brand-ready career timeline." />
   <meta name="twitter:image" content="https://yourdomain.com/img/4.jpg" />
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#060507;
-      --ink:#f5f5f6;
-      --muted:#a8a8af;
-      --line:rgba(255,255,255,.12);
-      --accent:#e6e1da;
-      --lilac:#cdb5ff;
-      --nav-h:64px;
-      --container:1080px;
+    :root {
+      --bg: #060507;
+      --ink: #f5f5f6;
+      --muted: #a8a8af;
+      --line: rgba(255, 255, 255, .12);
+      --accent: #e6e1da;
+      --lilac: #cdb5ff;
+      --nav-h: 64px;
+      --container: 1080px;
     }
 
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family:'Montserrat',system-ui,-apple-system,sans-serif;
-      font-weight:300;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      text-rendering:optimizeLegibility;
-      overflow-x:hidden;
+    html,
+    body {
+      height: 100%
     }
-    img{max-width:100%;height:auto;display:block}
-    .hairline{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
-    .caps{text-transform:uppercase;letter-spacing:.16em}
-    .serif{font-family:'Cormorant Garamond',serif;letter-spacing:.02em}
-    .micro{font-size:.86rem;color:var(--muted)}
-    .btn{
-      display:inline-flex;align-items:center;gap:.6rem;
-      padding:.7rem .95rem;border:1px solid var(--line);
-      text-transform:uppercase;letter-spacing:.12em;border-radius:10px;
-      transition:transform .25s ease,background .25s ease,border-color .25s ease, box-shadow .25s ease;
-    }
-    .btn:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.25)}
-    .btn-primary{border-color:var(--accent);color:var(--accent)}
-    .btn-primary:hover{background:var(--accent);color:var(--bg)}
-    .btn-ghost{color:var(--ink)}
-    .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.28)}
-    .btn-brand{border-color:var(--lilac);color:var(--lilac)}
-    .btn-brand:hover{background:var(--lilac);color:var(--bg)}
 
-    .chip{
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      padding:.34rem .6rem;border-radius:999px;
-      font-size:.76rem;letter-spacing:.06em;
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block
+    }
+
+    .hairline {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line), transparent)
+    }
+
+    .caps {
+      text-transform: uppercase;
+      letter-spacing: .16em
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: .02em
+    }
+
+    .micro {
+      font-size: .86rem;
+      color: var(--muted)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .7rem .95rem;
+      border: 1px solid var(--line);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      border-radius: 10px;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .25)
+    }
+
+    .btn-primary {
+      border-color: var(--accent);
+      color: var(--accent)
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      color: var(--bg)
+    }
+
+    .btn-ghost {
+      color: var(--ink)
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .28)
+    }
+
+    .btn-brand {
+      border-color: var(--lilac);
+      color: var(--lilac)
+    }
+
+    .btn-brand:hover {
+      background: var(--lilac);
+      color: var(--bg)
+    }
+
+    .chip {
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(255, 255, 255, .04);
+      padding: .34rem .6rem;
+      border-radius: 999px;
+      font-size: .76rem;
+      letter-spacing: .06em;
     }
 
     /* NAV */
-    .site-nav{
-      position:sticky;top:0;z-index:90;
-      display:flex;align-items:center;justify-content:space-between;gap:1rem;
-      padding:.5rem .8rem;height:var(--nav-h);
-      backdrop-filter:saturate(120%) blur(12px);
-      background:rgba(6,5,7,.55);
-      border-bottom:1px solid rgba(255,255,255,.08);
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .5rem .8rem;
+      height: var(--nav-h);
+      backdrop-filter: saturate(120%) blur(12px);
+      background: rgba(6, 5, 7, .55);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
     }
-    .logo img{height:30px;width:auto;display:block}
-    .nav-links a{
-      color:rgba(245,245,246,.82);
-      margin-left:1rem;text-decoration:none;font-size:.9rem;letter-spacing:.12em;
-      padding:.38rem .5rem;border-radius:8px;border:1px solid transparent;
-      transition:color .2s ease,background .2s ease,border-color .2s ease;
-    }
-    .nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
-    .nav-links a.active{color:var(--bg);background:var(--lilac);border-color:transparent}
-    @media(max-width:1023px){.nav-links{display:none}}
 
-    .mobile-menu{
-      position:fixed;inset:0;z-index:95;display:none;
-      background:rgba(6,5,7,.72);backdrop-filter:blur(16px) saturate(120%);
+    .logo img {
+      height: 30px;
+      width: auto;
+      display: block
     }
-    .mobile-menu.open{display:block}
-    .mobile-link{
-      display:block;padding:1rem 0;
-      font-size:1rem;letter-spacing:.12em;color:var(--ink);
-      border-bottom:1px solid rgba(255,255,255,.1);
-    }
-    .no-scroll{overflow:hidden;height:100%;position:fixed;width:100%}
 
-    /* HERO */
-    header.hero{
-      position:relative;
-      padding:18px 1rem 10px;
-      background:
-        radial-gradient(60% 60% at 50% 18%, rgba(205,181,255,.10), transparent 58%),
-        radial-gradient(70% 60% at 50% 40%, rgba(230,225,218,.05), transparent 62%);
+    .nav-links a {
+      color: rgba(245, 245, 246, .82);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: .9rem;
+      letter-spacing: .12em;
+      padding: .38rem .5rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: color .2s ease, background .2s ease, border-color .2s ease;
     }
-    .hero-inner{max-width:var(--container);margin:0 auto;position:relative}
-    .hero-shell{
-      position:relative;
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:18px;
-      overflow:hidden;
-      background:rgba(0,0,0,.22);
+
+    .nav-links a:hover {
+      color: var(--ink);
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .18)
     }
-    .hero-shell .bg{
-      position:absolute;inset:0;
-      background:url('img/4.jpg') center/cover no-repeat;
-      filter:contrast(1.03) saturate(.95) brightness(.62);
-      transform:scale(1.02);
+
+    .nav-links a.active {
+      color: var(--bg);
+      background: var(--lilac);
+      border-color: transparent
     }
-    .hero-shell .shade{
-      position:absolute;inset:0;
-      background:
-        radial-gradient(120% 90% at 30% 70%, rgba(0,0,0,.86), rgba(0,0,0,.55) 55%, rgba(0,0,0,.22) 75%, transparent 86%),
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.28) 50%, rgba(0,0,0,.12));
-    }
-    .hero-shell .content{
-      position:relative;z-index:2;
-      padding:20px;
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
-    }
-    @media(min-width:980px){
-      .hero-shell .content{
-        grid-template-columns:1.1fr .9fr;
-        align-items:end;
-        padding:28px;
+
+    @media(max-width:1023px) {
+      .nav-links {
+        display: none
       }
     }
-    .hero-kicker{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:.45rem .75rem;border-radius:999px;
-      border:1px solid rgba(205,181,255,.25);
-      background:rgba(0,0,0,.25);
-      color:rgba(245,245,246,.92);
-      width:max-content;
-      backdrop-filter:blur(10px);
-    }
-    .dot{width:6px;height:6px;border-radius:999px;background:var(--lilac);box-shadow:0 0 18px rgba(205,181,255,.45)}
 
-    .hero-title{
-      margin:10px 0 8px 0;
-      font-weight:500;
-      text-transform:uppercase;
-      letter-spacing:.20em;
-      font-size:clamp(28px, 4.2vw, 46px);
-      text-shadow:0 1px 0 rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.35);
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 95;
+      display: none;
+      background: rgba(6, 5, 7, .72);
+      backdrop-filter: blur(16px) saturate(120%);
     }
-    .hero-sub{
-      margin:0;
-      font-size:clamp(16px, 2.2vw, 20px);
-      color:rgba(230,225,218,.95);
-      line-height:1.55;
-    }
-    .accent-line{width:64px;height:2px;background:var(--lilac);opacity:.9;margin:12px 0 10px}
 
-    .hero-card{
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:16px;
-      background:rgba(6,5,7,.34);
-      backdrop-filter:blur(12px) saturate(120%);
-      padding:16px 16px 14px;
+    .mobile-menu.open {
+      display: block
     }
-    .hero-statgrid{
-      display:grid;grid-template-columns:repeat(3,1fr);
-      gap:10px;margin-top:12px;
-      padding-top:12px;border-top:1px solid rgba(255,255,255,.10);
+
+    .mobile-link {
+      display: block;
+      padding: 1rem 0;
+      font-size: 1rem;
+      letter-spacing: .12em;
+      color: var(--ink);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
     }
-    .stat{text-align:center;padding:.4rem .3rem}
-    .stat-num{font-weight:600;letter-spacing:.06em;color:var(--lilac)}
-    .stat-label{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:.15rem}
+
+    .no-scroll {
+      overflow: hidden;
+      height: 100%;
+      position: fixed;
+      width: 100%
+    }
+
+    /* HERO */
+    header.hero {
+      position: relative;
+      padding: 18px 1rem 10px;
+      background:
+        radial-gradient(60% 60% at 50% 18%, rgba(205, 181, 255, .10), transparent 58%),
+        radial-gradient(70% 60% at 50% 40%, rgba(230, 225, 218, .05), transparent 62%);
+    }
+
+    .hero-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      position: relative
+    }
+
+    .hero-shell {
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, .10);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, .22);
+    }
+
+    .hero-shell .bg {
+      position: absolute;
+      inset: 0;
+      background: url('img/4.jpg') center/cover no-repeat;
+      filter: contrast(1.03) saturate(.95) brightness(.62);
+      transform: scale(1.02);
+    }
+
+    .hero-shell .shade {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(120% 90% at 30% 70%, rgba(0, 0, 0, .86), rgba(0, 0, 0, .55) 55%, rgba(0, 0, 0, .22) 75%, transparent 86%),
+        linear-gradient(180deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .28) 50%, rgba(0, 0, 0, .12));
+    }
+
+    .hero-shell .content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media(min-width:980px) {
+      .hero-shell .content {
+        grid-template-columns: 1.1fr .9fr;
+        align-items: end;
+        padding: 28px;
+      }
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: .45rem .75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(205, 181, 255, .25);
+      background: rgba(0, 0, 0, .25);
+      color: rgba(245, 245, 246, .92);
+      width: max-content;
+      backdrop-filter: blur(10px);
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--lilac);
+      box-shadow: 0 0 18px rgba(205, 181, 255, .45)
+    }
+
+    .hero-title {
+      margin: 10px 0 8px 0;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .20em;
+      font-size: clamp(28px, 4.2vw, 46px);
+      text-shadow: 0 1px 0 rgba(0, 0, 0, .35), 0 18px 40px rgba(0, 0, 0, .35);
+    }
+
+    .hero-sub {
+      margin: 0;
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(230, 225, 218, .95);
+      line-height: 1.55;
+    }
+
+    .accent-line {
+      width: 64px;
+      height: 2px;
+      background: var(--lilac);
+      opacity: .9;
+      margin: 12px 0 10px
+    }
+
+    .hero-card {
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 16px;
+      background: rgba(6, 5, 7, .34);
+      backdrop-filter: blur(12px) saturate(120%);
+      padding: 16px 16px 14px;
+    }
+
+    .hero-statgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, .10);
+    }
+
+    .stat {
+      text-align: center;
+      padding: .4rem .3rem
+    }
+
+    .stat-num {
+      font-weight: 600;
+      letter-spacing: .06em;
+      color: var(--lilac)
+    }
+
+    .stat-label {
+      font-size: .74rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-top: .15rem
+    }
 
     /* MAIN */
-    main{padding:12px 1rem 52px;max-width:var(--container);margin:0 auto}
-    .section-wrap{
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:16px;
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-      padding:16px;
-    }
-    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:.6rem}
-    .section-head h2{
-      margin:0;font-weight:500;
-      font-size:clamp(18px, 2.1vw, 24px);
-      text-transform:uppercase;letter-spacing:.16em
+    main {
+      padding: 12px 1rem 52px;
+      max-width: var(--container);
+      margin: 0 auto
     }
 
-    .card{
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:16px;
-      overflow:hidden;
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-      transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    .section-wrap {
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .01));
+      padding: 16px;
     }
-    .card:hover{
-      transform:translateY(-2px);
-      border-color:rgba(205,181,255,.30);
-      box-shadow:0 14px 34px rgba(0,0,0,.35), 0 0 28px rgba(205,181,255,.08);
-    }
-    .card .copy{padding:14px 14px 16px}
-    .meta{color:var(--muted);margin-top:.45rem;line-height:1.65}
 
-    .ratio-16x9{aspect-ratio:16/9}
-    .media-cover{width:100%;height:100%;object-fit:cover;object-position:center}
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: .6rem
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-weight: 500;
+      font-size: clamp(18px, 2.1vw, 24px);
+      text-transform: uppercase;
+      letter-spacing: .16em
+    }
+
+    .card {
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .01));
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(205, 181, 255, .30);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, .35), 0 0 28px rgba(205, 181, 255, .08);
+    }
+
+    .card .copy {
+      padding: 14px 14px 16px
+    }
+
+    .meta {
+      color: var(--muted);
+      margin-top: .45rem;
+      line-height: 1.65
+    }
+
+    .ratio-16x9 {
+      aspect-ratio: 16/9
+    }
+
+    .media-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center
+    }
 
     /* Timeline */
-    .timeline{
-      position:relative;
-      padding-left:18px;
+    .timeline {
+      position: relative;
+      padding-left: 18px;
     }
-    .timeline::before{
-      content:"";
-      position:absolute;left:6px;top:6px;bottom:6px;
-      width:1px;background:rgba(255,255,255,.14);
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: rgba(255, 255, 255, .14);
     }
-    .t-item{position:relative;padding:12px 12px 12px 18px;border-radius:14px}
-    .t-item + .t-item{margin-top:10px}
-    .t-dot{
-      position:absolute;left:-2px;top:16px;
-      width:14px;height:14px;border-radius:999px;
-      background:rgba(205,181,255,.20);
-      border:1px solid rgba(205,181,255,.55);
-      box-shadow:0 0 18px rgba(205,181,255,.16);
+
+    .t-item {
+      position: relative;
+      padding: 12px 12px 12px 18px;
+      border-radius: 14px
     }
-    .t-kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:rgba(245,245,246,.78)}
-    .t-title{margin:.35rem 0 0 0;font-weight:500;color:#fff}
-    .t-text{margin:.35rem 0 0 0;color:rgba(245,245,246,.72);line-height:1.65}
+
+    .t-item+.t-item {
+      margin-top: 10px
+    }
+
+    .t-dot {
+      position: absolute;
+      left: -2px;
+      top: 16px;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(205, 181, 255, .20);
+      border: 1px solid rgba(205, 181, 255, .55);
+      box-shadow: 0 0 18px rgba(205, 181, 255, .16);
+    }
+
+    .t-kicker {
+      font-size: .74rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: rgba(245, 245, 246, .78)
+    }
+
+    .t-title {
+      margin: .35rem 0 0 0;
+      font-weight: 500;
+      color: #fff
+    }
+
+    .t-text {
+      margin: .35rem 0 0 0;
+      color: rgba(245, 245, 246, .72);
+      line-height: 1.65
+    }
 
     /* Reveal */
-    .anim-fade{opacity:0;transform:translateY(12px);transition:opacity .65s ease, transform .65s ease}
-    .anim-fade.in{opacity:1;transform:none}
-    .anim-fade.out{opacity:0;transform:translateY(12px)}
-    .anim-fade[data-delay="1"]{transition-delay:.08s}
-    .anim-fade[data-delay="2"]{transition-delay:.16s}
-    .anim-fade[data-delay="3"]{transition-delay:.24s}
-    @media(prefers-reduced-motion:reduce){
-      .anim-fade{opacity:1;transform:none;transition:none}
+    .anim-fade {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .65s ease, transform .65s ease
+    }
+
+    .anim-fade.in {
+      opacity: 1;
+      transform: none
+    }
+
+    .anim-fade.out {
+      opacity: 0;
+      transform: translateY(12px)
+    }
+
+    .anim-fade[data-delay="1"] {
+      transition-delay: .08s
+    }
+
+    .anim-fade[data-delay="2"] {
+      transition-delay: .16s
+    }
+
+    .anim-fade[data-delay="3"] {
+      transition-delay: .24s
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .anim-fade {
+        opacity: 1;
+        transform: none;
+        transition: none
+      }
     }
   </style>
 </head>
@@ -296,7 +554,8 @@
           <img src="img/Logo2.png" alt="KOYIN logo" class="h-8">
           <span class="serif text-[#e6e1da]">KOYIN SANUSI</span>
         </a>
-        <button id="navClose" class="p-2 rounded-md border border-white/10 hover:border-white/25" aria-label="Close menu">
+        <button id="navClose" class="p-2 rounded-md border border-white/10 hover:border-white/25"
+          aria-label="Close menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
           </svg>
@@ -397,19 +656,22 @@
         <figure class="lg:col-span-5 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
           <div class="relative" style="aspect-ratio:3/4">
             <img src="img/d4.jpeg" alt="Koyin Sanusi portrait" class="w-full h-full object-cover">
-            <span class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-black/12 to-transparent"></span>
+            <span
+              class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-black/12 to-transparent"></span>
           </div>
           <figcaption class="micro p-3 text-center">Editorial portrait, Lagos</figcaption>
         </figure>
 
         <div class="lg:col-span-7">
           <p class="serif text-[20px] leading-[1.55] text-[#e6e1da]">
-            Koyinsola “Koyin” Sanusi is a Nigerian model, actor and recording artist. He became a finalist on Big Brother Naija Season 10
+            Koyinsola “Koyin” Sanusi is a Nigerian model, actor and recording artist. He became a finalist on Big
+            Brother Naija Season 10
             and finished as second runner up, widely tagged the “Last Man Standing” for consistency under pressure.
           </p>
 
           <p class="mt-3" style="color:rgba(245,245,246,.72); line-height:1.75">
-            His edge is not noise. It is repeatable performance: camera control, clean posture in tight frames, and a premium visual read
+            His edge is not noise. It is repeatable performance: camera control, clean posture in tight frames, and a
+            premium visual read
             that brands can trust in commercials, events and campaign content.
           </p>
 
@@ -442,10 +704,14 @@
           <div class="mt-4 section-wrap" style="padding:14px;border-radius:16px">
             <div class="caps micro" style="color:rgba(245,245,246,.75)">Why strategists pick him</div>
             <ul class="mt-2" style="margin:0;padding-left:1.1rem;color:rgba(245,245,246,.74);line-height:1.8">
-              <li><strong style="color:#fff;font-weight:500">High recall:</strong> a face and posture that holds frame and reads premium.</li>
-              <li><strong style="color:#fff;font-weight:500">Low-risk delivery:</strong> calm presence, controlled image, repeatable takes.</li>
-              <li><strong style="color:#fff;font-weight:500">Cross-market utility:</strong> fashion, film, music-led campaigns and live appearances.</li>
-              <li><strong style="color:#fff;font-weight:500">Audience proof:</strong> finalist visibility plus public-voted recognition.</li>
+              <li><strong style="color:#fff;font-weight:500">High recall:</strong> a face and posture that holds frame
+                and reads premium.</li>
+              <li><strong style="color:#fff;font-weight:500">Low-risk delivery:</strong> calm presence, controlled
+                image, repeatable takes.</li>
+              <li><strong style="color:#fff;font-weight:500">Cross-market utility:</strong> fashion, film, music-led
+                campaigns and live appearances.</li>
+              <li><strong style="color:#fff;font-weight:500">Audience proof:</strong> finalist visibility plus
+                public-voted recognition.</li>
             </ul>
           </div>
 
@@ -478,7 +744,8 @@
                 <div class="t-kicker">Foundation</div>
                 <h3 class="t-title serif text-[20px]">Movement, performance, camera comfort</h3>
                 <p class="t-text">
-                  Early creative identity shaped by performance energy: dance, music, and on-camera confidence that later translates cleanly into modeling and brand work.
+                  Early creative identity shaped by performance energy: dance, music, and on-camera confidence that
+                  later translates cleanly into modeling and brand work.
                 </p>
               </div>
             </div>
@@ -489,7 +756,8 @@
                 <div class="t-kicker">Pre-BBNaija</div>
                 <h3 class="t-title serif text-[20px]">Commercial presence and music-video visibility</h3>
                 <p class="t-text">
-                  Built range through on-set repetitions: learning blocking, pacing, and the discipline that makes short-form campaign content look expensive.
+                  Built range through on-set repetitions: learning blocking, pacing, and the discipline that makes
+                  short-form campaign content look expensive.
                 </p>
               </div>
             </div>
@@ -500,7 +768,8 @@
                 <div class="t-kicker">2025</div>
                 <h3 class="t-title serif text-[20px]">BBNaija Season 10: second runner up</h3>
                 <p class="t-text">
-                  Finished Top 3. Public identity solidified around consistency: “Last Man Standing”. From there, the focus becomes conversion: visibility into structured partnerships.
+                  Finished Top 3. Public identity solidified around consistency: “Last Man Standing”. From there, the
+                  focus becomes conversion: visibility into structured partnerships.
                 </p>
               </div>
             </div>
@@ -511,7 +780,8 @@
                 <div class="t-kicker">Now</div>
                 <h3 class="t-title serif text-[20px]">Brand-facing momentum and international readiness</h3>
                 <p class="t-text">
-                  Working inside the premium lifestyle lane: campaigns, appearances, and collaborations that position him as a credible talent for global-facing briefs.
+                  Working inside the premium lifestyle lane: campaigns, appearances, and collaborations that position
+                  him as a credible talent for global-facing briefs.
                 </p>
               </div>
             </div>
@@ -527,7 +797,8 @@
                 Guinness joined as a Gold Sponsor for Season 10 and drove major cultural moments around the show.
               </p>
               <p class="meta">
-                This context is why post-show partnerships can scale fast: the audience already associates the finalist with sponsor culture.
+                This context is why post-show partnerships can scale fast: the audience already associates the finalist
+                with sponsor culture.
               </p>
               <div class="mt-3 flex flex-wrap gap-2">
                 <a class="btn btn-ghost" href="index.html#moments">Campaign work</a>
@@ -553,7 +824,8 @@
     <section class="anim-fade" style="margin-top:16px">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <article class="card anim-fade">
-          <a href="https://music.apple.com/us/album/girls-geng-single/1808403312" target="_blank" rel="noopener" class="block overflow-hidden">
+          <a href="https://music.apple.com/us/album/girls-geng-single/1808403312" target="_blank" rel="noopener"
+            class="block overflow-hidden">
             <div class="ratio-16x9">
               <img src="img/mu.jpg" alt="Girls and Geng by Koyin, official poster" class="media-cover">
             </div>
@@ -562,11 +834,13 @@
             <h3 class="caps micro tracking-[.14em] uppercase mb-1 text-white/70">Music</h3>
             <h4 class="text-[1.05rem] font-semibold leading-tight">Girls&amp;Geng</h4>
             <p class="meta text-[0.95rem] text-white/80 mt-1">
-              Songwriter and recording artist capability: useful for music-led briefs, campaign soundbeds, and brand storytelling.
+              Songwriter and recording artist capability: useful for music-led briefs, campaign soundbeds, and brand
+              storytelling.
             </p>
             <div class="mt-3 flex flex-wrap items-center gap-2">
               <a href="https://music.apple.com/us/album/girls-geng-single/1808403312" target="_blank" rel="noopener"
-                class="inline-flex items-center rounded-md border border-white/15 px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Apple Music</a>
+                class="inline-flex items-center rounded-md border border-white/15 px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Apple
+                Music</a>
               <a href="https://open.spotify.com/track/0yGp0JS2ObXujtbXY9kBoH" target="_blank" rel="noopener"
                 class="inline-flex items-center rounded-md border border-white/15 px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Spotify</a>
               <a href="https://www.youtube.com/watch?v=dDYxucYI_kE" target="_blank" rel="noopener"
@@ -603,7 +877,8 @@
         <span class="micro">Partnership-ready</span>
       </div>
       <p style="color:var(--muted); max-width:860px; line-height:1.75;">
-        For brand films, editorial campaigns, commercials, live appearances or music-led brand moments, reach the bookings team.
+        For brand films, editorial campaigns, commercials, live appearances or music-led brand moments, reach the
+        bookings team.
         Long-term partnerships welcome.
       </p>
       <div class="mt-3 flex gap-2 flex-wrap">
@@ -612,20 +887,55 @@
       </div>
     </section>
   </main>
-
-  <footer class="px-5 py-12">
-    <div class="max-w-[1080px] mx-auto">
+  <footer class="px-5 py-12 relative z-20">
+    <div class="max-w-[1200px] mx-auto">
       <div class="hairline mb-6"></div>
       <div class="flex flex-col md:flex-row items-center justify-between gap-5">
         <div class="text-center md:text-left">
           <div class="serif text-[18px] text-[#e6e1da]">KOYIN SANUSI</div>
           <div class="micro mt-1">Not talent. Testament.</div>
         </div>
-        <div class="text-center md:text-left micro mt-2 md:mt-0">&copy; <span id="yr"></span> Koyin Sanusi</div>
+        <div class="social flex items-center gap-3">
+          <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" rel="noopener"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://x.com/koyin_official?s=21" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path d="M18 2h3l-8 9 8 11h-6.9l-4.5-6-5.6 6H1l8.6-9.3L1.5 2H8.5l4.1 5.5L18 2Z" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z" />
+            </svg>
+          </a>
+          <a href="#" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="hairline mt-6 mb-4"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-2">
+        <div class="text-center md:text-left micro">&copy; <span id="yr"></span> Koyin Sanusi</div>
+        <div class="micro" style="opacity: 0.4;">
+          Designed &amp; built by
+          <a href="mailto:ayipexfunby@gmail.com"
+            style="opacity: 1; color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+            Funbi Akintade
+          </a>
+        </div>
       </div>
     </div>
   </footer>
-
   <script>
     /* MOBILE NAV */
     const navToggle = document.getElementById('navToggle');
@@ -636,14 +946,14 @@
 
     function openMenu() {
       mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden','false');
-      navToggle?.setAttribute('aria-expanded','true');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      navToggle?.setAttribute('aria-expanded', 'true');
       lock();
     }
     function closeMenu() {
       mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden','true');
-      navToggle?.setAttribute('aria-expanded','false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      navToggle?.setAttribute('aria-expanded', 'false');
       unlock();
     }
 
@@ -680,4 +990,5 @@
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
