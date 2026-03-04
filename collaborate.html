@@ -1,916 +1,1208 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Koyin — Works</title>
-  <meta name="description" content="Selected works by KOYIN SANUSI — commercials, brand films, editorial stills." />
-
-  <!-- Tailwind (CDN) -->
+  <title>Koyin Works</title>
+  <meta name="description" content="Selected works by KOYIN SANUSI brand campaigns, commercials, film, editorial." />
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Bebas+Neue&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #060507;
-      --panel: #0b0a0d;
-      --ink: #f5f5f6;
-      --muted: #a8a8af;
-      --line: rgba(255, 255, 255, .12);
-      --accent: #e6e1da;
+      --ink: #f0ede8;
+      --muted: #7a7880;
+      --dim: #3a3840;
+      --line: rgba(255,255,255,.09);
       --lilac: #cdb5ff;
-      --lilac-85: rgba(205, 181, 255, .85);
-      --lilac-28: rgba(205, 181, 255, .28);
+      --lilac-dim: rgba(205,181,255,.18);
+      --gold: #d4b483;
+      --cream: #e6e1da;
     }
 
-    html,
-    body {
-      height: 100%
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
-      margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      font-family: 'Montserrat', system-ui, sans-serif;
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
       overflow-x: hidden;
     }
 
-    .hairline {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--line), transparent)
-    }
-
-    .caps {
-      text-transform: uppercase;
-      letter-spacing: .18em
-    }
-
-    .serif {
-      font-family: 'Cormorant Garamond', serif;
-      letter-spacing: .02em
-    }
-
-    .micro {
-      font-size: .76rem;
-      color: var(--muted)
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      padding: .85rem 1.6rem;
-      border: 1px solid var(--line);
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      transition: transform .25s ease, background .25s ease, border-color .25s ease
-    }
-
-    .btn:hover {
-      transform: translateY(-2px)
-    }
-
-    .btn-ghost {
-      color: var(--ink)
-    }
-
-    .btn-ghost:hover {
-      background: rgba(255, 255, 255, .06);
-      border-color: rgba(255, 255, 255, .28)
-    }
-
-    .btn-brand {
-      border-color: var(--lilac);
-      color: var(--lilac)
-    }
-
-    .btn-brand:hover {
-      background: var(--lilac);
-      color: var(--bg)
-    }
-
-    /* NAV (Refined) */
-    .site-nav {
-      position: fixed;
-      top: 14px;
-      left: 12px;
-      right: 12px;
-      z-index: 70;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: .55rem .8rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      backdrop-filter: saturate(120%) blur(10px);
-      background: rgba(0, 0, 0, .22);
-    }
-
-    .logo img {
-      height: 32px;
-      width: auto;
-      display: block
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: .6rem
-    }
-
-    .nav-links a {
-      position: relative;
-      padding: .45rem .75rem;
-      text-decoration: none;
-      font-size: .87rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      transition: color .25s ease;
-    }
-
-    .nav-links a::after {
+    /* Grain overlay */
+    body::before {
       content: "";
-      position: absolute;
-      left: .75rem;
-      right: .75rem;
-      bottom: .28rem;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(205, 181, 255, .55), transparent);
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform .25s ease;
-      border-radius: 2px;
-    }
-
-    .nav-links a:hover {
-      color: var(--ink)
-    }
-
-    .nav-links a:hover::after {
-      transform: scaleX(1)
-    }
-
-    .nav-links a.active {
-      color: var(--lilac)
-    }
-
-    .nav-links a.active::after {
-      transform: scaleX(1)
-    }
-
-    @media (max-width:1023px) {
-      .site-nav {
-        border-radius: 10px
-      }
-
-      .nav-links {
-        display: none
-      }
-
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: .4rem
-      }
-
-      .burger {
-        display: inline-flex
-      }
-    }
-
-    @media (min-width:1024px) {
-      .burger {
-        display: none
-      }
-    }
-
-    /* MOBILE MENU */
-    .mobile-menu {
       position: fixed;
       inset: 0;
-      z-index: 80;
-      display: none;
-      background: rgba(6, 5, 7, .72);
-      backdrop-filter: blur(16px) saturate(120%);
+      z-index: 1000;
+      pointer-events: none;
+      opacity: .028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 180px 180px;
     }
 
-    .mobile-menu.open {
-      display: block
-    }
+    /* ── TYPOGRAPHY ── */
+    .bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: .04em; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    .caps { text-transform: uppercase; letter-spacing: .18em; }
+    .micro { font-size: .72rem; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
 
-    .mobile-menu a {
-      display: block;
-      padding: 1rem 0;
-      font-size: 1rem;
-      letter-spacing: .14em
+    /* ── NAV ── */
+    .site-nav {
+      position: fixed; top: 14px; left: 12px; right: 12px; z-index: 200;
+      border: 1px solid var(--line); border-radius: 12px;
+      padding: .55rem .8rem;
+      display: flex; align-items: center; justify-content: space-between;
+      backdrop-filter: saturate(120%) blur(14px);
+      background: rgba(6,5,7,.55);
     }
-
-    .mobile-menu .cta {
-      margin-top: 1rem
+    .logo img { height: 30px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: .2rem; }
+    .nav-links a {
+      padding: .4rem .7rem; text-decoration: none; font-size: .8rem;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+      transition: color .2s ease; border-radius: 6px;
     }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a.active { color: var(--lilac); }
 
-    /* HERO */
-    header.hero {
-      position: relative;
-      min-height: 70vh;
-      display: flex;
-      align-items: flex-end;
-      padding: 22vh 1.25rem 10vh;
+    @media(max-width:1023px) { .nav-links { display: none; } .burger { display: inline-flex; } }
+    @media(min-width:1024px) { .burger { display: none; } }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 300; display: none;
+      background: rgba(6,5,7,.88); backdrop-filter: blur(20px);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; padding: .9rem 0; font-size: .95rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--lilac); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .75rem 1.5rem; border: 1px solid var(--line);
+      text-transform: uppercase; letter-spacing: .16em; font-size: .75rem;
+      font-family: 'Montserrat', sans-serif; font-weight: 400;
+      cursor: pointer; text-decoration: none;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-brand { border-color: var(--lilac); color: var(--lilac); }
+    .btn-brand:hover { background: var(--lilac); color: var(--bg); }
+    .btn-ghost { color: var(--ink); }
+    .btn-ghost:hover { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.25); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: flex-end;
+      padding: 0 clamp(1rem, 4vw, 3rem) clamp(4rem, 8vh, 7rem);
       overflow: hidden;
-      background: radial-gradient(80% 60% at 50% 40%, rgba(230, 225, 218, .06), transparent 60%);
     }
 
-    .hero-media {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden
-    }
-
+    .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
     .hero-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: contrast(1.05) saturate(.85) brightness(.66);
-      transform: scale(1.02);
+      width: 100%; height: 100%; object-fit: cover;
+      filter: contrast(1.08) saturate(.75) brightness(.55);
+      transform: scale(1.04);
+      transition: transform 12s ease;
     }
+    .hero.loaded .hero-media img { transform: scale(1); }
 
     .hero-media::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
+      content: ""; position: absolute; inset: 0; pointer-events: none;
       background:
-        radial-gradient(120% 90% at 26% 70%, rgba(0, 0, 0, .82) 0%, rgba(0, 0, 0, .58) 48%, rgba(0, 0, 0, .30) 70%, transparent 82%),
-        linear-gradient(180deg, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .34) 40%, transparent 75%),
-        linear-gradient(0deg, rgba(0, 0, 0, .26), rgba(0, 0, 0, .26));
+        linear-gradient(to top, rgba(6,5,7,.95) 0%, rgba(6,5,7,.6) 30%, rgba(6,5,7,.15) 65%, transparent 100%),
+        linear-gradient(to right, rgba(6,5,7,.5) 0%, transparent 60%);
+    }
+
+    /* Big decorative background text */
+    .hero-bg-text {
+      position: absolute; bottom: -2rem; right: -1rem; z-index: 1;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(120px, 22vw, 320px);
+      color: rgba(255,255,255,.025);
+      line-height: 1; pointer-events: none; user-select: none;
+      letter-spacing: -.01em;
     }
 
     .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%
+      position: relative; z-index: 2;
+      width: 100%; max-width: 1200px; margin: 0 auto;
     }
 
-    .hero-copy {
-      background: rgba(6, 5, 7, .36);
-      backdrop-filter: blur(10px) saturate(120%);
-      -webkit-backdrop-filter: blur(10px) saturate(120%);
-      border: 1px solid rgba(255, 255, 255, .10);
-      border-radius: 14px;
-      padding: 1.1rem 1.1rem .95rem;
-    }
-
-    /* HERO TYPE SYSTEM */
     .hero-kicker {
-      font: 500 .8rem/1 'Montserrat', system-ui, -apple-system, sans-serif;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: rgba(245, 245, 246, .78)
+      font-size: .72rem; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--lilac); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .hero-kicker::before {
+      content: ""; display: block; width: 32px; height: 1px; background: var(--lilac); opacity: .6;
     }
 
     .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 9vw, 130px);
+      line-height: .95; letter-spacing: .02em;
+      color: var(--ink); margin-bottom: 1.2rem;
+    }
+    .hero-title em {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      line-height: 1.06;
-      letter-spacing: .02em;
-      text-transform: none;
-      font-size: clamp(34px, 5.2vw, 68px);
-      color: #f5f5f6;
-      text-shadow: 0 10px 28px rgba(0, 0, 0, .36);
-      margin: .1rem 0 .35rem 0;
+      font-style: italic; font-size: .62em;
+      color: var(--cream); letter-spacing: .04em;
     }
 
-    .hero-sub {
-      font: 400 clamp(14px, 1.6vw, 18px)/1.45 'Montserrat', system-ui, -apple-system, sans-serif;
-      color: #e6e1da;
-      opacity: .95
+    .hero-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16px, 1.8vw, 22px);
+      color: var(--cream); opacity: .85; max-width: 520px; line-height: 1.5;
+      margin-bottom: 2rem;
     }
 
-    .hero-underline {
-      width: 72px;
-      height: 2px;
-      background: linear-gradient(90deg, #cdb5ff, #ffffff60);
-      opacity: .9;
-      margin: .65rem 0 .25rem;
-      border-radius: 2px
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-bottom: 2rem;
+      padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .hero-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem; line-height: 1; color: var(--lilac); display: block;
+    }
+    .hero-stat-label { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: .2rem; display: block; }
+
+    .hero-nav-pills {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+    }
+    .pill {
+      padding: .38rem .9rem; border: 1px solid rgba(255,255,255,.12); border-radius: 999px;
+      font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+      transition: all .2s ease; background: rgba(6,5,7,.4);
+    }
+    .pill:hover { border-color: var(--lilac); color: var(--lilac); background: rgba(205,181,255,.06); }
+
+    /* ── SECTION SYSTEM ── */
+    .section-wrap {
+      max-width: 1200px; margin: 0 auto;
+      padding: clamp(4rem, 8vh, 7rem) clamp(1rem, 4vw, 3rem);
     }
 
-    /* FRAMES */
-    .frame {
-      border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: 14px;
-      overflow: hidden;
-      background: #000;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, .28);
-      position: relative
+    .section-label {
+      display: flex; align-items: center; gap: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+    .section-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(72px, 10vw, 120px);
+      line-height: 1; color: rgba(255,255,255,.04);
+      user-select: none; pointer-events: none;
+      position: relative; top: .1em;
+      transition: color .4s ease;
+    }
+    .section-wrap:hover .section-num { color: rgba(205,181,255,.07); }
+
+    .section-title-block { flex: 1; }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 4vw, 52px);
+      letter-spacing: .06em; line-height: 1;
+      color: var(--ink);
+    }
+    .section-sub {
+      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted); margin-top: .4rem;
     }
 
-    .frame img,
-    .frame iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover
+    .section-divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.08) 30%, rgba(255,255,255,.08) 70%, transparent);
+      margin-bottom: clamp(4rem, 8vh, 7rem);
     }
 
-    .frame:hover img {
-      transform: scale(1.06);
-      transition: transform .6s cubic-bezier(.2, .9, .2, 1)
+    /* ── BRAND CAMPAIGN CARDS ── */
+    .campaign-card {
+      position: relative; border-radius: 16px; overflow: hidden;
+      background: #080709; border: 1px solid rgba(255,255,255,.07);
+      cursor: pointer;
+      transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
     }
-
-    .frame .meta {
-      padding: .75rem .9rem;
-      border-top: 1px solid rgba(255, 255, 255, .08)
-    }
-
-    .chip {
-      border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 999px;
-      padding: .18rem .6rem;
-      font-size: .72rem;
-      color: var(--lilac)
-    }
-
-    /* Premium lilac ring glow */
-    .frame::after {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: 14px;
-      pointer-events: none;
-      box-shadow: 0 0 0 0 rgba(205, 181, 255, 0);
-      transition: box-shadow .45s ease
-    }
-
-    .frame.ring-lilac:hover::after {
-      box-shadow: 0 0 26px 2px rgba(205, 181, 255, .22)
-    }
-
-    /* ====== ANIMATIONS ====== */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    @keyframes clipReveal {
-      from {
-        opacity: .01;
-        clip-path: inset(0 0 100% 0)
-      }
-
-      to {
-        opacity: 1;
-        clip-path: inset(0 0 0 0)
-      }
-    }
-
-    @keyframes slideL {
-      from {
-        opacity: 0;
-        transform: translateX(-42px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    @keyframes slideR {
-      from {
-        opacity: 0;
-        transform: translateX(42px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    @keyframes slideLsm {
-      from {
-        opacity: 0;
-        transform: translateX(-26px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    @keyframes slideRsm {
-      from {
-        opacity: 0;
-        transform: translateX(26px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
-    .reveal {
-      opacity: 0;
-      will-change: transform, opacity
-    }
-
-    .reveal.in {
-      animation: fadeUp .9s cubic-bezier(.2, .9, .2, 1) forwards;
-      animation-delay: var(--d, 0s)
-    }
-
-    .reveal-clip {
-      opacity: 0
-    }
-
-    .reveal-clip.in {
-      animation: clipReveal 1.1s cubic-bezier(.2, .8, .2, 1) forwards;
-      animation-delay: var(--d, 0s)
-    }
-
-    .look {
-      opacity: 0
-    }
-
-    .look.from-l.in {
-      animation: slideL .9s cubic-bezier(.22, .9, .22, 1) forwards
-    }
-
-    .look.from-r.in {
-      animation: slideR .9s cubic-bezier(.22, .9, .22, 1) forwards
-    }
-
-    @media (max-width:767px) {
-      .look.from-l.in {
-        animation: slideLsm .7s cubic-bezier(.22, .9, .22, 1) forwards
-      }
-
-      .look.from-r.in {
-        animation: slideRsm .7s cubic-bezier(.22, .9, .22, 1) forwards
-      }
-    }
-
-    /* Flying Fish: portrait crop mobile, cinematic 16:9 desktop */
-    .featureTall img {
-      object-position: center 14%
-    }
-
-    /* Mobile hero tuning */
-    @media (max-width:767px) {
-      header.hero {
-        padding: calc(84px + 5vh) 1rem 8vh;
-        min-height: 88vh
-      }
-
-      .hero-media img {
-        filter: contrast(1.06) saturate(.9) brightness(.60);
-        object-position: center 24%
-      }
-
-      .hero-media::after {
-        background:
-          radial-gradient(120% 95% at 50% 72%, rgba(0, 0, 0, .86) 0%, rgba(0, 0, 0, .60) 46%, rgba(0, 0, 0, .32) 70%, transparent 86%),
-          linear-gradient(180deg, rgba(0, 0, 0, .70), rgba(0, 0, 0, .30) 50%, transparent 78%),
-          linear-gradient(0deg, rgba(0, 0, 0, .24), rgba(0, 0, 0, .24));
-      }
-    }
-
-    @media (prefers-reduced-motion:reduce) {
-
-      .reveal,
-      .reveal-clip,
-      .look {
-        opacity: 1 !important;
-        animation: none !important
-      }
-
-      .frame:hover img {
-        transform: none !important
-      }
-    }
-
-    /* FOOTER socials */
-    .social a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, .14);
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    }
-
-    .social a:hover {
+    .campaign-card:hover {
+      border-color: rgba(205,181,255,.3);
+      box-shadow: 0 24px 60px rgba(0,0,0,.6), 0 0 40px rgba(205,181,255,.08);
       transform: translateY(-3px);
-      border-color: rgba(205, 181, 255, .55);
-      background: rgba(205, 181, 255, .06)
     }
 
-    .social svg {
-      width: 18px;
-      height: 18px
+    .campaign-card .media {
+      position: relative; overflow: hidden;
+    }
+    .campaign-card .media video,
+    .campaign-card .media img.poster {
+      display: block; width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .7s cubic-bezier(.2,.9,.2,1);
+    }
+    .campaign-card:hover .media video,
+    .campaign-card:hover .media img.poster { transform: scale(1.05); }
+
+    /* video always on top */
+    .campaign-card .media video { position: absolute; inset: 0; z-index: 2; }
+    .campaign-card .media img.poster { position: absolute; inset: 0; z-index: 1; display: none; }
+    .campaign-card .media img.poster.show { display: block; }
+    .campaign-card .media .media-inner { position: relative; width: 100%; }
+
+    .card-overlay {
+      position: absolute; inset: 0; z-index: 3;
+      background: linear-gradient(to top, rgba(6,5,7,.92) 0%, rgba(6,5,7,.4) 38%, transparent 65%);
+      transition: opacity .3s ease;
+    }
+
+    .card-badge {
+      position: absolute; top: 14px; left: 14px; z-index: 4;
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      padding: .28rem .7rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(6,5,7,.5); backdrop-filter: blur(8px);
+      color: var(--ink);
+    }
+
+    .card-info {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 4;
+      padding: 1.1rem 1.1rem 1rem;
+    }
+    .card-brand {
+      font-size: .65rem; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--lilac); margin-bottom: .3rem;
+    }
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 600; color: #fff; line-height: 1.2;
+      margin-bottom: .3rem;
+    }
+    .card-desc {
+      font-size: .75rem; color: rgba(255,255,255,.55); line-height: 1.5;
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height .35s ease, opacity .3s ease;
+    }
+    .campaign-card:hover .card-desc { max-height: 80px; opacity: 1; }
+
+    /* ── HERO FEATURE CARD (full-width) ── */
+    .card-hero .media .media-inner { padding-bottom: 72%; }
+    @media(max-width:767px) { .card-hero .media .media-inner { padding-bottom: 110%; } }
+
+    /* ── STANDARD CARDS ── */
+    .card-std .media .media-inner { padding-bottom: 115%; }
+    @media(max-width:767px) { .card-std .media .media-inner { padding-bottom: 110%; } }
+
+    /* ── WIDE CARD (2-col span) ── */
+    .card-wide .media .media-inner { padding-bottom: 56%; }
+
+    /* ── COMPACT CARD ── */
+    .card-compact .media .media-inner { padding-bottom: 75%; }
+    @media(max-width:767px) { .card-compact .media .media-inner { padding-bottom: 95%; } }
+
+    /* ── LOOKBOOK CINEMATIC SCROLL DECK ── */
+    .lb-scroll-outer {
+      position: relative; overflow: hidden;
+    }
+    .lb-scroll-outer::before,
+    .lb-scroll-outer::after {
+      content: ""; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 10; pointer-events: none;
+    }
+    .lb-scroll-outer::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+    .lb-scroll-outer::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+
+    .lb-track {
+      display: flex; gap: 20px;
+      padding: 44px 64px 56px;
+      overflow-x: auto; overflow-y: visible;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab; user-select: none;
+      scrollbar-width: none;
+    }
+    .lb-track:active { cursor: grabbing; }
+    .lb-track::-webkit-scrollbar { display: none; }
+
+    .lb-card {
+      position: relative; flex: 0 0 auto;
+      width: clamp(220px, 28vw, 310px);
+      border-radius: 16px; overflow: hidden;
+      scroll-snap-align: center;
+      border: 1px solid rgba(255,255,255,.07);
+      background: #0a080d;
+      box-shadow: 0 4px 12px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.4), 0 28px 60px rgba(0,0,0,.3);
+      filter: brightness(.78) blur(.5px);
+      transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .45s ease, filter .45s ease, border-color .3s ease;
+      transform-origin: bottom center;
+    }
+    .lb-card:nth-child(odd)  { transform: rotate(-1.4deg) translateY(8px); }
+    .lb-card:nth-child(even) { transform: rotate(1.2deg)  translateY(2px); }
+    .lb-card:nth-child(3n)   { transform: rotate(-0.6deg) translateY(12px); }
+
+    .lb-card:hover, .lb-card.lb-active {
+      transform: rotate(0deg) translateY(-16px) scale(1.05) !important;
+      filter: brightness(1) blur(0px);
+      border-color: rgba(205,181,255,.3);
+      box-shadow: 0 6px 16px rgba(0,0,0,.35), 0 20px 48px rgba(0,0,0,.55), 0 36px 80px rgba(205,181,255,.14);
+      z-index: 10;
+    }
+
+    .lb-card img {
+      display: block; width: 100%; aspect-ratio: 3/4;
+      object-fit: cover;
+      transition: transform .5s cubic-bezier(.2,.9,.2,1);
+    }
+    .lb-card:hover img { transform: scale(1.04); }
+
+    .lb-card-overlay {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(to top, rgba(6,5,7,.9) 0%, rgba(6,5,7,.18) 45%, transparent 68%);
+    }
+    .lb-card-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: .9rem 1rem .85rem;
+    }
+    .lb-card-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: .6rem; letter-spacing: .32em;
+      color: var(--lilac); opacity: .85; display: block; margin-bottom: .18rem;
+    }
+    .lb-card-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .95rem; font-style: italic; color: rgba(255,255,255,.9); line-height: 1.3;
+    }
+
+    .lb-card.lb-wide {
+      width: clamp(300px, 42vw, 500px);
+    }
+    .lb-card.lb-wide img { aspect-ratio: 4/3; object-position: center 30%; }
+
+    .lb-dots {
+      display: flex; justify-content: center; gap: 6px; padding-bottom: .8rem;
+    }
+    .lb-dot {
+      width: 24px; height: 2px; border-radius: 2px;
+      background: rgba(255,255,255,.14); cursor: pointer;
+      transition: background .3s ease, width .3s ease;
+    }
+    .lb-dot.active { background: var(--lilac); width: 38px; }
+
+    @media(max-width:639px) {
+      .lb-track { padding: 32px 22px 48px; gap: 14px; }
+      .lb-card { width: clamp(190px, 66vw, 252px); }
+      .lb-card.lb-wide { width: clamp(260px, 80vw, 330px); }
+      .lb-scroll-outer::before,
+      .lb-scroll-outer::after { width: 24px; }
+    }
+
+    /* ── FILM CARDS ── */
+    .film-card {
+      position: relative; border-radius: 12px; overflow: hidden;
+      background: #08070a; border: 1px solid rgba(255,255,255,.07);
+      transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    }
+    .film-card:hover {
+      border-color: rgba(205,181,255,.25);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 48px rgba(0,0,0,.5);
+    }
+    .film-card img {
+      width: 100%; object-fit: cover; display: block;
+      transition: transform .5s cubic-bezier(.2,.9,.2,1);
+    }
+    .film-card:hover img { transform: scale(1.04); }
+    .film-meta {
+      padding: .9rem 1rem .85rem;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .film-chip {
+      display: inline-block;
+      font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
+      padding: .2rem .55rem; border-radius: 999px;
+      border: 1px solid rgba(205,181,255,.3); color: var(--lilac);
+    }
+
+    /* ── COMMERCIAL EMBED ── */
+    .embed-card {
+      border: 1px solid rgba(255,255,255,.08); border-radius: 16px;
+      overflow: hidden; background: #000;
+      transition: border-color .3s ease, box-shadow .3s ease;
+    }
+    .embed-card:hover {
+      border-color: rgba(205,181,255,.25);
+      box-shadow: 0 16px 48px rgba(0,0,0,.5);
+    }
+    .embed-meta {
+      padding: .85rem 1rem;
+      border-top: 1px solid rgba(255,255,255,.07);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      border: 1px solid rgba(255,255,255,.07); border-radius: 16px;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, rgba(205,181,255,.04), rgba(255,255,255,.01));
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+    }
+    .cta-strip-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 4vw, 48px); letter-spacing: .04em; line-height: 1;
+      color: var(--ink);
+    }
+    .cta-strip-sub {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 1.05rem; color: var(--muted); margin-top: .3rem;
+    }
+
+    /* ── SCROLL REVEALS ── */
+    .r { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.9,.2,1); }
+    .r.in { opacity: 1; transform: none; }
+    .r-l { opacity: 0; transform: translateX(-30px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
+    .r-l.in { opacity: 1; transform: none; }
+    .r-r { opacity: 0; transform: translateX(30px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
+    .r-r.in { opacity: 1; transform: none; }
+
+    /* stagger delays */
+    .d1 { transition-delay: .05s; }
+    .d2 { transition-delay: .12s; }
+    .d3 { transition-delay: .19s; }
+    .d4 { transition-delay: .26s; }
+    .d5 { transition-delay: .33s; }
+    .d6 { transition-delay: .40s; }
+
+    /* ── FOOTER ── */
+    .social a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 38px; height: 38px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      transition: transform .2s, border-color .2s, background .2s;
+    }
+    .social a:hover { transform: translateY(-3px); border-color: rgba(205,181,255,.5); background: rgba(205,181,255,.06); }
+    .social svg { width: 17px; height: 17px; }
+
+    /* Hairline */
+    .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.09), transparent); }
+
+
+    /* ══ MOBILE GRID FIXES ══ */
+    @media(max-width:639px) {
+      .grid.grid-cols-1.lg\:grid-cols-3 > .campaign-card,
+      .grid.grid-cols-1.lg\:grid-cols-3 > a.campaign-card {
+        grid-column: span 1 !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 .card-compact .media .media-inner {
+        padding-bottom: 110% !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-3 > :last-child {
+        grid-column: span 2 !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-3 .card-compact .media .media-inner {
+        padding-bottom: 80% !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+      }
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 .card-std .media .media-inner {
+        padding-bottom: 95% !important;
+      }
+      .section-num { font-size: 56px !important; }
+      .section-label { gap: .7rem !important; margin-bottom: 1.5rem !important; }
+      .cta-strip { padding: 1.6rem 1.2rem !important; }
+      .hero-stats { gap: 1.4rem !important; }
+    }
+
+    @media(min-width:640px) and (max-width:767px) {
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 .card-std .media .media-inner {
+        padding-bottom: 105% !important;
+      }
+      .card-hero .media .media-inner { padding-bottom: 85% !important; }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .r, .r-l, .r-r { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .campaign-card:hover { transform: none; }
+      .film-card:hover { transform: none; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <div class="site-nav" role="navigation" aria-label="Primary">
-    <div class="logo">
-      <a href="index.html"><img src="img/Logo2.png" alt="KOYIN logo" loading="eager"></a>
-    </div>
+<!-- ═══ NAV ═══ -->
+<nav class="site-nav" role="navigation" aria-label="Primary">
+  <div class="logo">
+    <a href="index.html"><img src="img/Logo2.png" alt="KOYIN" loading="eager"></a>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="thestory.html">His Story</a>
+    <a href="collaborate.html" class="active">Works</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="flex items-center gap-2">
+    <a href="contact.html" class="btn btn-brand hidden lg:inline-flex" style="font-size:.68rem; padding:.5rem 1.1rem;">Book Koyin</a>
+    <button id="navToggle" class="burger p-2 rounded-md border border-white/10 hover:border-white/25">
+      <span class="sr-only">Menu</span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
 
-    <!-- SIMPLIFIED DESKTOP NAV -->
-    <div class="nav-links">
-      <a href="index.html" active">Home</a>
-      <a href="thestory.html">His Story</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div class="nav-right">
-      <button id="navToggle" aria-expanded="false" aria-controls="mobileMenu"
-        class="burger p-2 rounded-md border border-white/10 hover:border-white/25">
-        <span class="sr-only">Open menu</span>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
+<!-- Mobile menu -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="h-full max-w-[640px] mx-auto px-6 flex flex-col">
+    <div class="flex items-center justify-between py-5">
+      <img src="img/Logo2.png" alt="KOYIN" class="h-8">
+      <button id="navClose" class="p-2 rounded-md border border-white/10">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
     </div>
-  </div>
-
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="mobile-menu">
-    <div class="h-full max-w-[640px] mx-auto px-6 flex flex-col">
-      <div class="flex items-center justify-between py-4">
-        <img src="img/Logo2.png" alt="KOYIN logo" class="h-8">
-        <button id="navClose" class="p-2 rounded-md border border-white/10 hover:border-white/25">
-          <span class="sr-only">Close menu</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
-        </button>
-      </div>
-      <div class="grow flex flex-col justify-center">
-        <nav class="space-y-1">
-          <a href="index.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--lilac)]">Home</a>
-          <a href="thestory.html"
-            class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">his
-            Story</a>
-          <a href="contact.html"
-            class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)]">Contact</a>
-        </nav>
-        <div class="cta pt-6">
-          <a href="contact.html" class="btn btn-brand w-full justify-center">Start enquiry</a>
-        </div>
-      </div>
-      <div class="pb-6 text-center micro" style="color:var(--lilac)">© KOYIN SANUSI</div>
+    <div class="grow flex flex-col justify-center gap-0">
+      <a href="index.html">Home</a>
+      <a href="thestory.html">His Story</a>
+      <a href="collaborate.html" class="active" style="color:var(--lilac)">Works</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="pb-8 flex flex-col gap-3">
+      <a href="contact.html" class="btn btn-brand w-full justify-center">Book Koyin</a>
+      <div class="text-center micro" style="color:var(--lilac)">© KOYIN SANUSI</div>
     </div>
   </div>
+</div>
 
-  <!-- HERO -->
-  <header class="hero" aria-labelledby="heroTitle">
-    <div class="hero-media absolute inset-0 -z-10 overflow-hidden">
-      <img src="img/nav.jpg" alt="Koyin — works hero" />
+
+<!-- ═══ HERO ═══ -->
+<header class="hero" id="heroTop">
+  <div class="hero-media">
+    <img src="img/nav.jpg" alt="Koyin Works" />
+  </div>
+  <div class="hero-bg-text">WORKS</div>
+
+  <div class="hero-inner">
+    <div class="hero-kicker r">The Archive</div>
+    <h1 class="hero-title r d1">
+      Brand<br><em>Campaigns,</em><br>Film & Editorial
+    </h1>
+    <p class="hero-desc r d2">\One face. A body of work built on precision, not luck.</p>
+
+
+    <nav class="hero-nav-pills r d4" aria-label="Jump to section">
+      <a class="pill" href="#brand-campaigns">Brand Campaigns</a>
+      <a class="pill" href="#lookbook">Lookbook</a>
+      <a class="pill" href="#film">Film</a>
+      <a class="pill" href="#music">Music</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 01 BRAND CAMPAIGNS
+════════════════════════════════════════════ -->
+<div class="section-divider" id="brand-campaigns"></div>
+
+<div class="section-wrap">
+  <div class="section-label r">
+    <span class="section-num">01</span>
+    <div class="section-title-block">
+      <div class="section-title">Brand Campaigns</div>
+      <div class="section-sub">Official partnerships & ambassador deals</div>
+    </div>
+  </div>
+
+  <!-- ROW A: Guinness (hero wide) + Betking stacked -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5">
+
+    <!-- Guinness hero feature -->
+    <a href="https://www.guinness.com" target="_blank" rel="noopener"
+       class="campaign-card card-hero lg:col-span-2 block r">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/guinness_poster.jpg">
+            <source src="videos/guinness.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/guinness_poster.jpg" alt="Guinness Africa Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#1a0a00,#3d1a00)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Brand Ambassador</span>
+      <div class="card-info">
+        <div class="card-brand">Guinness Africa</div>
+        <div class="card-title">Made of More</div>
+        <p class="card-desc">Official Guinness Africa brand ambassador fronting campaigns that speak directly to a generation that runs on ambition and authenticity.</p>
+      </div>
+    </a>
+
+    <!-- BetKing stacked tall -->
+    <a href="https://www.betking.com" target="_blank" rel="noopener"
+       class="campaign-card card-std block r d2">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/betking_poster.jpg">
+            <source src="videos/Betking.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/betking_poster.jpg" alt="BetKing Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#08001a,#2a0060)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Partnership</span>
+      <div class="card-info">
+        <div class="card-brand">BetKing Nigeria</div>
+        <div class="card-title">King Energy</div>
+        <p class="card-desc">Official brand partner for BetKing bringing cultural reach to Nigeria's biggest sports entertainment platform.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- ROW B: Oraimo + Sonmade + MTN three equal columns -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+
+    <div class="campaign-card card-std r">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/oraimo_poster.jpg">
+            <source src="videos/oraimo.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/oraimo_poster.jpg" alt="Oraimo Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#001a10,#004d30)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Campaign</span>
+      <div class="card-info">
+        <div class="card-brand">Oraimo</div>
+        <div class="card-title">Find Your Rhythm</div>
+        <p class="card-desc">Featured in Oraimo's African market push connecting the brand to a generation that lives through sound and motion.</p>
+      </div>
     </div>
 
-    <div class="hero-inner grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <div class="lg:col-span-7">
-        <div class="hero-copy reveal">
-          <span class="hero-kicker">Selected Work</span>
-          <h1 id="heroTitle" class="hero-title">Commercials, Brand Film & Editorial</h1>
-          <div class="hero-underline"></div>
-          <p class="hero-sub mt-2">Gen-Z taste with measurable impact — trusted by culture and brands.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <a class="btn btn-brand" href="#commercials">Commercials</a>
-            <a class="btn btn-ghost" href="#filmography">Filmography</a>
-            <a class="btn btn-ghost" href="#lookbook">Lookbook</a>
-          </div>
+    <div class="campaign-card card-std r d2">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/sonmade_poster.jpg">
+            <source src="videos/sonmade.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/sonmade_poster.jpg" alt="Sonmade Luxury Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#0c0a18,#1e1235)'"/>
         </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Official Ambassador</span>
+      <div class="card-info">
+        <div class="card-brand">Sonmade Luxury</div>
+        <div class="card-title">Dressed for Legacy</div>
+        <p class="card-desc">Official Sonmade ambassador embodying Nigerian craftsmanship meeting global style codes.</p>
       </div>
     </div>
-  </header>
 
-  <main class="px-5 md:px-6 lg:px-8 max-w-[1200px] mx-auto py-12 md:py-16">
-
-    <!-- COMMERCIALS -->
-    <section class="reveal" id="commercials">
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="uppercase tracking-[.18em] text-[.95rem]">Commercials</h2>
-        <span class="micro">Selected spots</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-        <!-- Flying Fish — IMAGE TILE -->
-        <article class="frame ring-lilac reveal-clip featureTall">
-          <a href="contact.html" class="block">
-            <div class="relative aspect-[3/4] md:aspect-[16/9]">
-              <img src="img/ff1.jpg" alt="Flying Fish commercial — key still featuring Koyin"
-                class="absolute inset-0 w-full h-full object-cover" />
-            </div>
-          </a>
-          <div class="meta flex items-center justify-between">
-            <span class="serif text-[15px]">Flying Fish — Commercial</span>
-            <span class="chip">Key Still</span>
-          </div>
-        </article>
-
-        <!-- Coca-Cola — YT EMBED (single) -->
-        <article class="frame ring-lilac reveal-clip">
-          <div class="relative aspect-[16/9]">
-            <iframe class="absolute inset-0 w-full h-full"
-              src="https://www.youtube-nocookie.com/embed/xS6AG-ukpKA?rel=0&modestbranding=1&playsinline=1"
-              title="Coca-Cola commercial — Koyin" loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <div class="meta flex items-center justify-between">
-            <span class="serif text-[15px]">Coca-Cola — Commercial</span>
-            <span class="chip">YouTube</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!<!-- LOOKBOOK (Enhanced Full-Bleed Style) -->
-      <section id="lookbook" class="mt-20">
-        <div class="flex items-center justify-between mb-5">
-          <div>
-            <h2 class="uppercase tracking-[.2em] text-[1.05rem] font-semibold text-gray-800">Lookbook</h2>
-            <p class="micro text-gray-500 mt-1">Editorial & campaign frames</p>
-          </div>
-          <a href="collaborate.html"
-            class="text-sm text-gray-500 hover:text-black transition-all duration-300 flex items-center gap-1 group">
-            View Full Series
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 group-hover:translate-x-1 transition-transform"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-
-          <!-- Card -->
-          <figure
-            class="relative overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-500 group cursor-pointer">
-            <img src="img/5.jpg" alt="Editorial still 01"
-              class="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-all duration-700">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-            <figcaption
-              class="absolute bottom-3 left-3 text-white text-[15px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-              Editorial — Look 01
-            </figcaption>
-          </figure>
-
-          <figure
-            class="relative overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-500 group cursor-pointer">
-            <img src="img/a.jpg" alt="Editorial still 02"
-              class="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-all duration-700">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-            <figcaption
-              class="absolute bottom-3 left-3 text-white text-[15px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-              Editorial — Look 02
-            </figcaption>
-          </figure>
-
-          <figure
-            class="relative overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-500 group cursor-pointer">
-            <img src="img/b.jpg" alt="Editorial still 03"
-              class="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-all duration-700">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-            <figcaption
-              class="absolute bottom-3 left-3 text-white text-[15px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-              Editorial — Look 03
-            </figcaption>
-          </figure>
-
-          <figure
-            class="relative overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-500 group cursor-pointer">
-            <img src="img/g1.jpg" alt="Editorial still 04"
-              class="w-full h-full object-cover group-hover:scale-105 group-hover:brightness-90 transition-all duration-700">
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-            <figcaption
-              class="absolute bottom-3 left-3 text-white text-[15px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
-              Editorial — Look 04
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-
-      <!-- FILMOGRAPHY -->
-      <section class="reveal mt-12" id="filmography">
-        <div class="flex items-center justify-between mb-3">
-          <h2 class="uppercase tracking-[.18em] text-[.95rem]">Filmography</h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
-          <article class="frame ring-lilac reveal-clip">
-            <div class="relative aspect-[2/3]">
-              <img src="img/m1.jpg" alt="Students on the Island (2024) — poster"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-            </div>
-            <div class="meta">
-              <div class="flex items-center justify-between">
-                <span class="serif text-[15px]">Students on the Island</span>
-                <span class="chip">2024 · IMDb</span>
-              </div>
-              <p class="micro mt-1">Feature — Role credited.</p>
-            </div>
-          </article>
-
-          <article class="frame ring-lilac reveal-clip">
-            <div class="relative aspect-[2/3]">
-              <img src="img/m2.jpg" alt="Sent from Above (2024) — poster"
-                class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-            </div>
-            <div class="meta">
-              <div class="flex items-center justify-between">
-                <span class="serif text-[15px]">Sent from Above</span>
-                <span class="chip">2024 · IMDb</span>
-              </div>
-              <p class="micro mt-1">Feature — Role credited.</p>
-            </div>
-          </article>
-
-          <article class="frame ring-lilac reveal-clip">
-            <div class="relative aspect-[2/3]">
-              <img src="img/m3.jpg" alt="Heart of the Poor — poster" class="absolute inset-0 w-full h-full object-cover"
-                loading="lazy">
-            </div>
-            <div class="meta">
-              <div class="flex items-center justify-between">
-                <span class="serif text-[15px]">Heart of the Poor</span>
-                <span class="chip">Feature</span>
-              </div>
-              <p class="micro mt-1">Drama — Cast role.</p>
-            </div>
-          </article>
-        </div>
-
-        <p class="micro mt-3">Note: First two titles are listed on IMDb.</p>
-      </section>
-
-
-      <!-- CTA -->
-      <section class="reveal mt-12">
-        <div class="hairline mb-5"></div>
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <p class="micro">Include usage, territories and term in your brief for accurate quoting.</p>
-          <div class="flex gap-2">
-            <a class="btn btn-brand" href="contact.html">Start enquiry</a>
-            <a class="btn btn-ghost" href="thestory.html"> Who is koyin? </a>
-          </div>
-        </div>
-      </section>
-  </main>
-
-  <!-- FOOTER (standard + socials) -->
-  <footer class="px-5 py-12">
-    <div class="max-w-[1200px] mx-auto">
-      <div class="hairline mb-6"></div>
-
-      <div class="flex flex-col md:flex-row items-center justify-between gap-5">
-        <div class="text-center md:text-left">
-          <div class="serif text-[18px] text-[#e6e1da]">KOYIN SANUSI</div>
-          <div class="micro mt-1">Not talent. Testament.</div>
-        </div>
-
-        <div class="social flex items-center gap-3">
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" target="_blank" rel="noopener"
-            aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-            </svg>
-          </a>
-          <!-- X (Twitter) -->
-          <a href="https://x.com/koyin_official?s=21" target="_blank" rel="noopener" aria-label="X">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2h3l-8 9 8 11h-6.9l-4.5-6-5.6 6H1l8.6-9.3L1.5 2H8.5l4.1 5.5L18 2Z" />
-            </svg>
-          </a>
-          <!-- TikTok -->
-          <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" target="_blank" rel="noopener"
-            aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z" />
-            </svg>
-          </a>
-          <!-- Facebook (placeholder if you don't have one yet) -->
-          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4z" />
-            </svg>
-          </a>
+    <div class="campaign-card card-std r d3">
+      <div class="media">
+        <div class="media-inner">
+          <img class="poster show" src="img/mtn.jpeg" alt="MTN Nigeria Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#1a1200,#4d3800)'"/>
         </div>
       </div>
-
-      <div class="text-center md:text-left micro mt-6">&copy; <span id="yr"></span> Koyin Sanusi</div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Red Carpet Host</span>
+      <div class="card-info">
+        <div class="card-brand">MTN Nigeria</div>
+        <div class="card-title">On the Carpet</div>
+        <p class="card-desc">Red carpet anchor for MTN Nigeria commanding the room on one of the country's most-watched platforms.</p>
+      </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- JS -->
-  <script>
-    // year
-    document.getElementById('yr').textContent = new Date().getFullYear();
+  <!-- ROW C: Poco + American Cola + Top Cafe + Spotify quad grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
 
-    // Mobile menu
-    const navToggle = document.getElementById('navToggle');
-    const navClose = document.getElementById('navClose');
-    const mobileMenu = document.getElementById('mobileMenu');
-    function openMenu() { mobileMenu.classList.add('open'); navToggle?.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobileMenu.classList.remove('open'); navToggle?.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
-    navToggle?.addEventListener('click', openMenu);
-    navClose?.addEventListener('click', closeMenu);
-    mobileMenu?.addEventListener('click', (e) => { const el = e.target; if (el.id === 'mobileMenu' || el.tagName === 'A') closeMenu(); });
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
+    <div class="campaign-card card-compact r">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/poco_poster.jpg">
+            <source src="videos/poco.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/poco_poster.jpg" alt="Poco Nigeria Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#001018,#00304a)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Campaign</span>
+      <div class="card-info">
+        <div class="card-brand">Poco Nigeria</div>
+        <div class="card-title">Tech Meets Culture</div>
+        <p class="card-desc">The face Poco Nigeria chose to carry its brand into the culture.</p>
+      </div>
+    </div>
 
-    (function () {
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    <div class="campaign-card card-compact r d2">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/americancola_poster.jpg">
+            <source src="videos/America cola.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/americancola_poster.jpg" alt="American Cola Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#1a0000,#4d0000)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Campaign</span>
+      <div class="card-info">
+        <div class="card-brand">American Cola</div>
+        <div class="card-title">Bold Taste, Bold Face</div>
+        <p class="card-desc">Fronting American Cola's Nigerian campaign with presence and energy.</p>
+      </div>
+    </div>
 
-      // Reveals + ClipReveals with replay on back/return
-      const reveals = [...document.querySelectorAll('.reveal, .reveal-clip')];
-      if (!prefersReduced) {
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-          });
-        }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
+    <div class="campaign-card card-compact r d3">
+      <div class="media">
+        <div class="media-inner">
+          <video autoplay muted loop playsinline preload="metadata" poster="img/topcafe_poster.jpg">
+            <source src="videos/topcafe.mp4" type="video/mp4"/>
+          </video>
+          <img class="poster" src="img/topcafe_poster.jpg" alt="Top Cafe Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#0e0800,#3a2200)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Campaign</span>
+      <div class="card-info">
+        <div class="card-brand">Top Cafe</div>
+        <div class="card-title">Every Sip, A Moment</div>
+        <p class="card-desc">Brand campaign for Top Cafe warm, grounded, and distinctly Nigerian.</p>
+      </div>
+    </div>
 
-        reveals.forEach((el, i) => { el.style.setProperty('--d', (0.05 * (i % 8)) + 's'); io.observe(el); });
+  
+    </div>
+  </div>
 
-        function replay() {
-          document.querySelectorAll('.in').forEach(el => el.classList.remove('in'));
-          requestAnimationFrame(() => reveals.forEach(el => el.classList.add('in')));
-          looks.forEach(el => lookIO.observe(el));
-        }
-        window.addEventListener('pageshow', (ev) => { if (ev.persisted) replay(); });
-        document.addEventListener('visibilitychange', () => {
-          const nav = performance.getEntriesByType('navigation')[0];
-          if (document.visibilityState === 'visible' && nav && nav.type === 'back_forward') replay();
-        });
-      } else {
-        reveals.forEach(el => el.classList.add('in'));
-      }
+  <!-- ROW D: Flying Fish (commercial still) + Coca-Cola (YouTube) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
 
-      // Lookbook meet-in-the-middle
-      const looks = [...document.querySelectorAll('.look')];
-      looks.forEach((el, idx) => el.classList.add(idx % 2 === 0 ? 'from-l' : 'from-r'));
-      const lookIO = new IntersectionObserver((entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); lookIO.unobserve(e.target); } });
-      }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-      looks.forEach(el => lookIO.observe(el));
+    <!-- Flying Fish commercial still as campaign card -->
+    <div class="campaign-card card-compact r">
+      <div class="media">
+        <div class="media-inner" style="padding-bottom:65%;">
+           <video autoplay muted loop playsinline preload="metadata" poster="img/topcafe_poster.jpg">
+            <source src="videos/BETKING2.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Commercial</span>
+      <div class="card-info">
+        <div class="card-brand">Flying Fish</div>
+        <div class="card-title">Fresh Energy</div>
+        <p class="card-desc">Key campaign still for Flying Fish. Cool, sharp, and culturally resonant.</p>
+      </div>
+    </div>
 
-      // Subtle hero parallax
-      const heroImg = document.querySelector('.hero-media img');
-      if (!prefersReduced && heroImg) {
-        let ticking = false;
-        const parallax = () => { const y = window.scrollY || window.pageYOffset; const off = Math.min(60, y * 0.12); heroImg.style.transform = `translateY(${off}px) scale(1.03)`; ticking = false; };
-        const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        parallax();
-      }
-    })();
-  </script>
+    <!-- Coca-Cola YouTube embed as campaign card -->
+    <div class="campaign-card r d2" style="overflow:hidden; border-radius:16px;">
+      <div style="position:relative; width:100%; padding-bottom:65%; background:#000; overflow:hidden;">
+        <iframe style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+          src="https://www.youtube-nocookie.com/embed/xS6AG-ukpKA?rel=0&modestbranding=1&playsinline=1"
+          title="Coca-Cola Koyin" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="card-overlay" style="pointer-events:none; opacity:0;"></div>
+      <div style="padding:.9rem 1.1rem; border-top:1px solid rgba(255,255,255,.07); display:flex; align-items:center; justify-content:space-between;">
+        <div>
+          <div class="card-brand" style="margin-bottom:.2rem;">Coca-Cola</div>
+          <div class="card-title" style="font-size:1.1rem;">The Official Commercial</div>
+        </div>
+        <span class="film-chip">YouTube</span>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 03 LOOKBOOK
+════════════════════════════════════════════ -->
+<div class="section-divider" id="lookbook"></div>
+
+<div class="section-wrap" style="padding-bottom:1.5rem;">
+  <div class="section-label r">
+    <span class="section-num">02</span>
+    <div class="section-title-block">
+      <div class="section-title">Lookbook</div>
+      <div class="section-sub">Editorial &amp; campaign frames</div>
+    </div>
+  </div>
+</div>
+
+<div class="lb-scroll-outer r">
+  <div class="lb-track" id="lbTrack">
+
+    <div class="lb-card">
+      <img src="img/5.jpg" alt="Editorial Look 01">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">01</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/cb1.jpeg" alt="Editorial Look 02">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">02</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/a.jpg" alt="Editorial Look 03">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">03</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card lb-wide">
+      <img src="img/ff1.jpg" alt="Campaign Flying Fish">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">Campaign</span>
+        <span class="lb-card-label">Flying Fish</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/d2.jpeg" alt="Editorial Look 04">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">04</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/b.jpg" alt="Editorial Look 05">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">05</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/d3.jpeg" alt="Editorial Look 06">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">06</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/g1.jpg" alt="Editorial Look 07">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">07</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/9.jpg" alt="Editorial Look 08">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">08</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+    <div class="lb-card">
+      <img src="img/nav.jpg" alt="Editorial Look 09">
+      <div class="lb-card-overlay"></div>
+      <div class="lb-card-info">
+        <span class="lb-card-num">09</span>
+        <span class="lb-card-label">Editorial Look</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="lb-dots" id="lbDots"></div>
+</div>
+
+<div style="height:clamp(3rem,5vh,5rem);"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 04 FILMOGRAPHY
+════════════════════════════════════════════ -->
+<div class="section-divider" id="film"></div>
+
+<div class="section-wrap">
+  <div class="section-label r">
+    <span class="section-num">03</span>
+    <div class="section-title-block">
+      <div class="section-title">Filmography</div>
+      <div class="section-sub">Feature films &amp; screen credits</div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+
+    <div class="film-card r">
+      <div class="overflow-hidden" style="aspect-ratio:2/3;">
+        <img src="img/m1.jpg" alt="Students on the Island (2024) poster" loading="lazy" style="aspect-ratio:2/3;">
+      </div>
+      <div class="film-meta">
+        <div class="flex items-center justify-between mb-1">
+          <span class="serif" style="font-size:15px; color:var(--ink);">Students on the Island</span>
+          <span class="film-chip">IMDb</span>
+        </div>
+        <p class="micro">2024 · Feature Role credited</p>
+      </div>
+    </div>
+
+    <div class="film-card r d2">
+      <div class="overflow-hidden" style="aspect-ratio:2/3;">
+        <img src="img/m2.jpg" alt="Sent from Above (2024) poster" loading="lazy" style="aspect-ratio:2/3;">
+      </div>
+      <div class="film-meta">
+        <div class="flex items-center justify-between mb-1">
+          <span class="serif" style="font-size:15px; color:var(--ink);">Sent from Above</span>
+          <span class="film-chip">IMDb</span>
+        </div>
+        <p class="micro">2024 · Feature Role credited</p>
+      </div>
+    </div>
+
+    <div class="film-card r d3">
+      <div class="overflow-hidden" style="aspect-ratio:2/3;">
+        <img src="img/m3.jpg" alt="Heart of the Poor poster" loading="lazy" style="aspect-ratio:2/3;">
+      </div>
+      <div class="film-meta">
+        <div class="flex items-center justify-between mb-1">
+          <span class="serif" style="font-size:15px; color:var(--ink);">Heart of the Poor</span>
+          <span class="film-chip">Feature</span>
+        </div>
+        <p class="micro">Drama · Cast role</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="micro mt-4 r" style="margin-top:1.2rem;">First two titles listed on IMDb.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SECTION 05 MUSIC
+════════════════════════════════════════════ -->
+<div class="section-divider" id="music"></div>
+
+<div class="section-wrap">
+  <div class="section-label r">
+    <span class="section-num">04</span>
+    <div class="section-title-block">
+      <div class="section-title">Music</div>
+      <div class="section-sub">Studio &amp; stage</div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+
+    <!-- Album art card -->
+    <a href="https://music.apple.com/us/song/girls-geng/1808403313" target="_blank" rel="noopener"
+       class="campaign-card block r" style="border-radius:16px;">
+      <div class="media">
+        <div class="media-inner" style="padding-bottom:100%;">
+          <img class="poster show" src="img/mu.jpg" alt="Girls & Geng Koyin"
+               onerror="this.style.background='linear-gradient(135deg,#0c0018,#260040)'"/>
+        </div>
+      </div>
+      <div class="card-overlay"></div>
+      <span class="card-badge">Single</span>
+      <div class="card-info">
+        <div class="card-brand">Music</div>
+        <div class="card-title">Girls &amp; Geng</div>
+        <p class="card-desc">Available now on Apple Music &amp; Spotify charting and culturally resonant.</p>
+      </div>
+    </a>
+
+    <!-- Track info panel -->
+    <div class="r d2" style="padding: 1rem 0;">
+      <div class="micro mb-3">Latest Release</div>
+      <h3 class="serif" style="font-size:clamp(2rem,5vw,3.5rem); font-weight:600; line-height:1.1; color:var(--ink); margin-bottom:.8rem;">
+        Girls &amp; Geng
+      </h3>
+      <p class="serif" style="font-size:1.05rem; color:var(--muted); line-height:1.6; margin-bottom:1.8rem; font-style:italic;">
+        Studio and stage sound that leads rooms and anchors culture. Koyin doesn't just model and act; he makes music that lands.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:.7rem; margin-bottom:2rem;">
+        <a href="https://music.apple.com/us/song/girls-geng/1808403313" target="_blank" rel="noopener"
+           class="btn btn-brand">Apple Music</a>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener"
+           class="btn btn-ghost">Spotify</a>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,.07); padding-top:1.2rem;">
+        <div class="micro mb-1">Genre</div>
+        <p style="font-size:.88rem; color:var(--cream);">Afrobeats / Contemporary Nigerian</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     CTA
+════════════════════════════════════════════ -->
+<div class="section-wrap" style="padding-top:0;">
+  <div class="cta-strip r">
+    <div>
+      <div class="cta-strip-title">Ready to Work Together?</div>
+      <div class="cta-strip-sub">Include usage, territories and timeline in your brief for accurate quoting.</div>
+    </div>
+    <div style="display:flex; gap:.8rem; flex-wrap:wrap; flex-shrink:0;">
+      <a class="btn btn-brand" href="contact.html">Start Enquiry</a>
+      <a class="btn btn-ghost" href="thestory.html">Who is Koyin?</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="px-5 py-12" style="max-width:1200px; margin:0 auto;">
+  <div class="hairline" style="margin-bottom:1.5rem;"></div>
+  <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+    <div class="text-center md:text-left">
+      <div class="serif" style="font-size:18px; color:var(--cream);">KOYIN SANUSI</div>
+      <div class="micro mt-1">Not talent. Testament.</div>
+    </div>
+    <div class="social flex items-center gap-3">
+      <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      </a>
+      <a href="https://x.com/koyin_official?s=21" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-8 9 8 11h-6.9l-4.5-6-5.6 6H1l8.6-9.3L1.5 2H8.5l4.1 5.5L18 2Z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z"/></svg>
+      </a>
+      <a href="#" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="micro text-center md:text-left mt-6">&copy; <span id="yr"></span> Koyin Sanusi</div>
+</footer>
+
+
+<script>
+(function(){
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const navClose  = document.getElementById('navClose');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const openMenu  = () => { mobileMenu.classList.add('open'); document.body.style.overflow='hidden'; navToggle?.setAttribute('aria-expanded','true'); };
+  const closeMenu = () => { mobileMenu.classList.remove('open'); document.body.style.overflow=''; navToggle?.setAttribute('aria-expanded','false'); };
+  navToggle?.addEventListener('click', openMenu);
+  navClose?.addEventListener('click', closeMenu);
+  mobileMenu?.addEventListener('click', e => { if(e.target === mobileMenu || e.target.tagName === 'A') closeMenu(); });
+  window.addEventListener('keydown', e => { if(e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
+
+  // Hero slow zoom on load
+  requestAnimationFrame(() => document.getElementById('heroTop')?.classList.add('loaded'));
+
+  // Scroll reveals
+  const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const revEls = [...document.querySelectorAll('.r,.r-l,.r-r')];
+  if(!reduced){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    revEls.forEach(el => io.observe(el));
+  } else {
+    revEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Campaign card video fallback
+  document.querySelectorAll('.campaign-card .media').forEach(wrap => {
+    const vid = wrap.querySelector('video');
+    const poster = wrap.querySelector('img.poster');
+    if(!vid || !poster) return;
+    const showFallback = () => { vid.style.display='none'; poster.classList.add('show'); };
+    vid.addEventListener('error', showFallback, {once:true});
+    const src = vid.querySelector('source');
+    if(src) src.addEventListener('error', () => { vid.load(); showFallback(); }, {once:true});
+    setTimeout(() => { if(vid.readyState === 0) showFallback(); }, 3000);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+
+  // ── Lookbook drag scroll + active card + dots ──
+  const lbTrack = document.getElementById('lbTrack');
+  const lbDots  = document.getElementById('lbDots');
+  if(lbTrack){
+    const cards = [...lbTrack.querySelectorAll('.lb-card')];
+    if(lbDots){
+      cards.forEach((_,i) => {
+        const d = document.createElement('div');
+        d.className = 'lb-dot' + (i===0?' active':'');
+        d.addEventListener('click', () => cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}));
+        lbDots.appendChild(d);
+      });
+    }
+    const updateActive = () => {
+      const cx = lbTrack.scrollLeft + lbTrack.offsetWidth/2;
+      let bestIdx=0, bestDist=Infinity;
+      cards.forEach((c,i)=>{ const d=Math.abs(c.offsetLeft+c.offsetWidth/2-cx); if(d<bestDist){bestDist=d;bestIdx=i;} });
+      cards.forEach((c,i)=>c.classList.toggle('lb-active',i===bestIdx));
+      if(lbDots) [...lbDots.querySelectorAll('.lb-dot')].forEach((d,i)=>d.classList.toggle('active',i===bestIdx));
+    };
+    lbTrack.addEventListener('scroll', updateActive, {passive:true});
+    updateActive();
+    let isDown=false, startX, scrollLeft;
+    lbTrack.addEventListener('mousedown', e=>{isDown=true; startX=e.pageX-lbTrack.offsetLeft; scrollLeft=lbTrack.scrollLeft;});
+    lbTrack.addEventListener('mouseleave',()=>isDown=false);
+    lbTrack.addEventListener('mouseup',()=>isDown=false);
+    lbTrack.addEventListener('mousemove',e=>{
+      if(!isDown)return; e.preventDefault();
+      lbTrack.scrollLeft = scrollLeft-(e.pageX-lbTrack.offsetLeft-startX)*1.4;
+    });
+  }
+})();
+</script>
+
 </body>
-
 </html>
