@@ -29,10 +29,7 @@
       --gap: 24px;
     }
 
-    html,
-    body {
-      height: 100%
-    }
+    html, body { height: 100% }
 
     body {
       margin: 0;
@@ -45,277 +42,85 @@
       text-rendering: optimizeLegibility;
       overflow-x: hidden;
       color-scheme: dark;
-      /* force native controls into dark */
     }
 
-    .hairline {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--line), transparent)
-    }
-
-    .caps {
-      text-transform: uppercase;
-      letter-spacing: .18em
-    }
-
-    .serif {
-      font-family: 'Cormorant Garamond', serif;
-      letter-spacing: .02em
-    }
-
-    .micro {
-      font-size: .76rem;
-      color: var(--muted)
-    }
+    .hairline { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent) }
+    .caps { text-transform: uppercase; letter-spacing: .18em }
+    .serif { font-family: 'Cormorant Garamond', serif; letter-spacing: .02em }
+    .micro { font-size: .76rem; color: var(--muted) }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      padding: .85rem 1.6rem;
-      border: 1px solid var(--line);
-      text-transform: uppercase;
-      letter-spacing: .16em;
+      display: inline-flex; align-items: center; gap: .6rem;
+      padding: .85rem 1.6rem; border: 1px solid var(--line);
+      text-transform: uppercase; letter-spacing: .16em;
       transition: transform .25s ease, background .25s ease, border-color .25s ease
     }
-
-    .btn:hover {
-      transform: translateY(-2px)
-    }
-
-    .btn-primary {
-      border-color: var(--accent);
-      color: var(--accent)
-    }
-
-    .btn-primary:hover {
-      background: var(--accent);
-      color: var(--bg)
-    }
-
-    .btn-ghost {
-      color: var(--ink)
-    }
-
-    .btn-ghost:hover {
-      background: rgba(255, 255, 255, .06);
-      border-color: rgba(255, 255, 255, .28)
-    }
-
-    .btn-brand {
-      border-color: var(--lilac);
-      color: var(--lilac)
-    }
-
-    .btn-brand:hover {
-      background: var(--lilac);
-      color: var(--bg)
-    }
+    .btn:hover { transform: translateY(-2px) }
+    .btn-primary { border-color: var(--accent); color: var(--accent) }
+    .btn-primary:hover { background: var(--accent); color: var(--bg) }
+    .btn-ghost { color: var(--ink) }
+    .btn-ghost:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.28) }
+    .btn-brand { border-color: var(--lilac); color: var(--lilac) }
+    .btn-brand:hover { background: var(--lilac); color: var(--bg) }
 
     /* NAV */
     .site-nav {
-      position: fixed;
-      top: 14px;
-      left: 12px;
-      right: 12px;
-      z-index: 70;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: .55rem .7rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      backdrop-filter: saturate(120%) blur(10px);
-      background: rgba(0, 0, 0, .22);
+      position: fixed; top: 14px; left: 12px; right: 12px; z-index: 70;
+      border: 1px solid var(--line); border-radius: 12px; padding: .55rem .7rem;
+      display: flex; align-items: center; justify-content: space-between;
+      backdrop-filter: saturate(120%) blur(10px); background: rgba(0,0,0,.22);
     }
-
-    .logo img {
-      height: 32px;
-      width: auto;
-      display: block
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      margin-left: 1.1rem;
-      text-decoration: none;
-      font-size: .92rem;
-      letter-spacing: .12em
-    }
-
-    .nav-links a:hover {
-      color: var(--ink)
-    }
-
-    .nav-links a.active {
-      color: var(--lilac)
-    }
+    .logo img { height: 32px; width: auto; display: block }
+    .nav-links a { color: var(--muted); margin-left: 1.1rem; text-decoration: none; font-size: .92rem; letter-spacing: .12em }
+    .nav-links a:hover { color: var(--ink) }
+    .nav-links a.active { color: var(--lilac) }
 
     @media (max-width: 1023px) {
-      .site-nav {
-        padding: .55rem .8rem;
-        border-radius: 10px
-      }
-
-      .nav-links {
-        display: none
-      }
-
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: .4rem
-      }
-
-      .burger {
-        display: inline-flex
-      }
+      .site-nav { padding: .55rem .8rem; border-radius: 10px }
+      .nav-links { display: none }
+      .nav-right { display: flex; align-items: center; gap: .4rem }
+      .burger { display: inline-flex }
     }
-
-    @media (min-width:1024px) {
-      .burger {
-        display: none
-      }
-    }
+    @media (min-width:1024px) { .burger { display: none } }
 
     .mobile-menu {
-      position: fixed;
-      inset: 0;
-      z-index: 80;
-      display: none;
-      background: rgba(6, 5, 7, .72);
-      backdrop-filter: blur(16px) saturate(120%);
+      position: fixed; inset: 0; z-index: 80; display: none;
+      background: rgba(6,5,7,.72); backdrop-filter: blur(16px) saturate(120%);
     }
-
-    .mobile-menu.open {
-      display: block
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 1rem 0;
-      font-size: 1rem;
-      letter-spacing: .14em
-    }
-
-    .mobile-menu .cta {
-      margin-top: 1rem
-    }
+    .mobile-menu.open { display: block }
+    .mobile-menu a { display: block; padding: 1rem 0; font-size: 1rem; letter-spacing: .14em }
+    .mobile-menu .cta { margin-top: 1rem }
 
     /* HERO */
     header.contact-hero {
-      position: relative;
-      min-height: 54vh;
-      display: flex;
-      align-items: end;
+      position: relative; min-height: 54vh; display: flex; align-items: end;
       padding: 22vh 1.25rem 10vh;
-      background: radial-gradient(80% 60% at 50% 40%, rgba(230, 225, 218, .06), transparent 60%);
+      background: radial-gradient(80% 60% at 50% 40%, rgba(230,225,218,.06), transparent 60%);
       overflow: hidden;
     }
-
-    .contact-hero .media {
-      position: absolute;
-      inset: 0;
-      z-index: 0
-    }
-
-    .contact-hero .media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: contrast(1.02) saturate(.9) brightness(.88)
-    }
-
-    .contact-hero .scrim {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .2) 50%, transparent)
-    }
-
-    .contact-hero .inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%
-    }
-
-    .accent-line {
-      width: 64px;
-      height: 2px;
-      background: var(--lilac);
-      opacity: .85;
-      margin: .6rem 0 .2rem 0
-    }
+    .contact-hero .media { position: absolute; inset: 0; z-index: 0 }
+    .contact-hero .media img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.02) saturate(.9) brightness(.88) }
+    .contact-hero .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.2) 50%, transparent) }
+    .contact-hero .inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100% }
+    .accent-line { width: 64px; height: 2px; background: var(--lilac); opacity: .85; margin: .6rem 0 .2rem 0 }
 
     /* Cards / inputs */
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .015))
-    }
+    .card { border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015)) }
+    .field { display: flex; flex-direction: column; gap: .35rem }
+    .field label { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: .35rem
+    .input, .select, .textarea {
+      background: rgba(255,255,255,.02); border: 1px solid var(--line);
+      border-radius: 10px; padding: .9rem 1rem; color: var(--ink);
+      outline: none; transition: border-color .2s ease, background .2s ease;
     }
-
-    .field label {
-      font-size: .8rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted)
-    }
-
-    .input,
-    .select,
-    .textarea {
-      background: rgba(255, 255, 255, .02);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: .9rem 1rem;
-      color: var(--ink);
-      outline: none;
-      transition: border-color .2s ease, background .2s ease;
-    }
-
-    .input:focus,
-    .select:focus,
-    .textarea:focus {
-      border-color: var(--lilac);
-      background: rgba(255, 255, 255, .04)
-    }
-
-    .input::placeholder,
-    .textarea::placeholder {
-      color: rgba(245, 245, 246, .60);
-    }
-
-    .select option {
-      color: #111;
-      background: #fff;
-    }
-
-    /* visible options in dropdowns */
-    .help {
-      font-size: .78rem;
-      color: var(--muted)
-    }
-
-    .error {
-      border-color: #ff6b6b !important
-    }
-
-    .error-text {
-      color: #ff8686;
-      font-size: .78rem
-    }
-
-    a.disabled-link {
-      pointer-events: none;
-      opacity: .6
-    }
+    .input:focus, .select:focus, .textarea:focus { border-color: var(--lilac); background: rgba(255,255,255,.04) }
+    .input::placeholder, .textarea::placeholder { color: rgba(245,245,246,.60) }
+    .select option { color: #111; background: #fff }
+    .help { font-size: .78rem; color: var(--muted) }
+    .error { border-color: #ff6b6b !important }
+    .error-text { color: #ff8686; font-size: .78rem }
+    a.disabled-link { pointer-events: none; opacity: .6 }
   </style>
 </head>
 
@@ -326,14 +131,11 @@
     <div class="logo">
       <a href="index.html"><img src="img/Logo2.png" alt="KOYIN logo" loading="eager"></a>
     </div>
-
-    <!-- Desktop links (only: Home / The Story / Contact) -->
     <div class="nav-links">
       <a href="index.html" class="caps">Home</a>
       <a href="collaborate.html" class="caps">His work</a>
       <a href="thestory.html" class="caps">His Story</a>
     </div>
-
     <div class="nav-right">
       <button id="navToggle" aria-expanded="false" aria-controls="mobileMenu"
         class="burger p-2 rounded-md border border-white/10 hover:border-white/25">
@@ -357,23 +159,16 @@
           </svg>
         </button>
       </div>
-
       <div class="grow flex flex-col justify-center">
         <nav class="space-y-1">
-          <a href="index.html"
-            class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">Home</a>
-          <a href="collaborate.html"
-            class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">His
-            Work</a>
-          <a href="thestory.html"
-            class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)]">His story</a>
+          <a href="index.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">Home</a>
+          <a href="collaborate.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)] border-b border-white/10">His Work</a>
+          <a href="thestory.html" class="caps text-[0.95rem] tracking-[.16em] text-[var(--ink)]/90 hover:text-[var(--lilac)]">His story</a>
         </nav>
-
         <div class="cta pt-6">
           <a href="contact.html" class="btn btn-brand w-full justify-center">Start enquiry</a>
         </div>
       </div>
-
       <div class="pb-6 text-center micro" style="color:var(--lilac)">© KOYIN SANUSI</div>
     </div>
   </div>
@@ -384,11 +179,8 @@
       <img src="img/5.jpg" alt="Background" class="w-full h-full object-cover" />
       <div class="scrim absolute inset-0 bg-black/40"></div>
     </div>
-
     <div class="inner absolute inset-0 flex flex-col justify-center items-center px-6 text-center">
-      <!-- Glass-like text container -->
-      <div
-        class="backdrop-blur-md bg-black/40 rounded-2xl px-6 py-8 md:px-10 md:py-10 max-w-2xl border border-white/10 shadow-lg">
+      <div class="backdrop-blur-md bg-black/40 rounded-2xl px-6 py-8 md:px-10 md:py-10 max-w-2xl border border-white/10 shadow-lg">
         <h1 id="contactTitle" class="uppercase tracking-[.24em] text-3xl md:text-5xl font-medium text-[#f4f2ef]">
           Contact Koyin
         </h1>
@@ -408,14 +200,31 @@
   <main class="px-5 md:px-6 lg:px-8 max-w-[1200px] mx-auto py-12 md:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-6">
 
-      <!-- FORM -->
+      <!-- FORM — posts to Formspree -->
       <section class="lg:col-span-7 card p-5 md:p-6" aria-labelledby="formTitle">
         <h2 id="formTitle" class="uppercase tracking-[.18em] text-[.95rem] mb-2">Project enquiry</h2>
         <p class="micro mb-6">We typically respond within 48 hours (Mon–Fri). Fields marked * are required.</p>
 
-        <!-- Vercel: post to /api/contact (serverless) -->
-        <form id="bookingForm" class="space-y-4" action="/api/contact" method="POST" novalidate>
-          <!-- honeypot -->
+        <!--
+          ╔══════════════════════════════════════════════════════════════╗
+          ║  FORMSPREE SETUP — replace YOUR_FORM_ID below               ║
+          ║  1. Go to formspree.io → sign in → New Form                 ║
+          ║  2. Name it "Koyin Contact", set email to                   ║
+          ║     contactkoyinsanusi@gmail.com                            ║
+          ║  3. Copy the form ID (e.g. xyzabcde) from your dashboard    ║
+          ║  4. Replace YOUR_FORM_ID in the action URL below            ║
+          ╚══════════════════════════════════════════════════════════════╝
+        -->
+        <form id="bookingForm" class="space-y-4"
+          action="https://formspree.io/f/mwvrelgz"
+          method="POST"
+          novalidate>
+
+          <!-- Formspree: redirect back to same page after submit -->
+          <input type="hidden" name="_next" value="contact.html" />
+          <!-- Formspree: custom subject line -->
+          <input type="hidden" name="_subject" value="New Booking Enquiry — Koyin Sanusi" />
+          <!-- honeypot spam trap -->
           <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -433,8 +242,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="field">
               <label for="email">Email *</label>
-              <input id="email" name="email" type="email" class="input" required placeholder="name@company.com"
-                inputmode="email" />
+              <input id="email" name="email" type="email" class="input" required placeholder="name@company.com" inputmode="email" />
             </div>
             <div class="field">
               <label for="phone">Phone / WhatsApp</label>
@@ -466,7 +274,6 @@
             </div>
           </div>
 
-          <!-- Currency + location -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="field">
               <label for="currency">Preferred currency</label>
@@ -501,22 +308,18 @@
 
           <div class="flex items-start gap-3">
             <input id="consent" name="consent" type="checkbox" required class="mt-1">
-            <label for="consent" class="micro">You agree to be contacted about this enquiry. Your details won’t be
-              shared.</label>
+            <label for="consent" class="micro">You agree to be contacted about this enquiry. Your details won't be shared.</label>
           </div>
 
-          <div id="formErrors" class="hidden p-3 rounded-md border border-red-400/40 text-sm text-red-200">
-          </div>
+          <div id="formErrors" class="hidden p-3 rounded-md border border-red-400/40 text-sm text-red-200"></div>
 
           <div class="flex flex-wrap gap-3 pt-2">
             <button type="submit" class="btn btn-primary" id="submitBtn">Send enquiry</button>
-            <!-- Removed alternate email route -->
           </div>
 
           <!-- success state -->
           <div id="successState" class="hidden mt-5 p-4 border border-white/15 rounded-lg">
-            <p class="serif text-[15px] text-[#e6e1da]">Thank you — the bookings team has your message. We’ll reply
-              within 48 hours.</p>
+            <p class="serif text-[15px] text-[#e6e1da]">Thank you — the bookings team has your message. We'll reply within 48 hours.</p>
           </div>
         </form>
       </section>
@@ -527,19 +330,17 @@
           <h3 class="uppercase tracking-[.16em] text-[.9rem] mb-2">At a glance</h3>
           <ul class="list-disc list-inside text-[15px] space-y-2 text-white/90">
             <li>Response window: 48 hours (Mon–Fri)</li>
-            <li>Base: Lagos, NG available worldwide</li>
+            <li>Base: Lagos, NG — available worldwide</li>
             <li>Usage, territories & term inform final rates</li>
           </ul>
           <div class="hairline my-4"></div>
-
         </div>
 
         <div class="card p-5 md:p-6">
           <h3 class="uppercase tracking-[.16em] text-[.9rem] mb-3">FAQs</h3>
           <details class="mb-3">
             <summary class="cursor-pointer serif text-[16px]">What helps you quote fast?</summary>
-            <p class="micro mt-2">Project type, dates, location, deliverables, usage (channels/territories/term), and
-              preferred currency.</p>
+            <p class="micro mt-2">Project type, dates, location, deliverables, usage (channels/territories/term), and preferred currency.</p>
           </details>
           <details class="mb-3">
             <summary class="cursor-pointer serif text-[16px]">Do you work with emerging brands?</summary>
@@ -547,7 +348,7 @@
           </details>
           <details>
             <summary class="cursor-pointer serif text-[16px]">Can you sign NDAs?</summary>
-            <p class="micro mt-2">Absolutely. Mention it in your enquiry and we’ll countersign digitally.</p>
+            <p class="micro mt-2">Absolutely. Mention it in your enquiry and we'll countersign digitally.</p>
           </details>
         </div>
       </aside>
@@ -563,8 +364,7 @@
           <div class="micro mt-1">Not talent. Testament.</div>
         </div>
         <div class="social flex items-center gap-3">
-          <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" rel="noopener"
-            aria-label="Instagram">
+          <a href="https://www.instagram.com/koyinofficiall?igsh=MXNreW5oZXd4aHY0dg==" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
               <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -578,8 +378,7 @@
           </a>
           <a href="https://www.tiktok.com/@koyinofficial?_t=ZS-90WQTdKuLWJ&_r=1" rel="noopener" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-              <path
-                d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z" />
+              <path d="M21 8.5a7.5 7.5 0 0 1-5.2-2.2v7.1a6.4 6.4 0 1 1-6.4-6.4c.3 0 .6 0 .9.1V9a3.9 3.9 0 1 0 3.9 3.9V2h3.2c.3 1.1 1 2.1 1.9 2.9a5.5 5.5 0 0 0 2.7 1.4v2.2Z" />
             </svg>
           </a>
           <a href="#" rel="noopener" aria-label="Facebook">
@@ -595,7 +394,7 @@
         <div class="micro" style="opacity: 0.4;">
           Designed &amp; built by
           <a href="mailto:ayipexfunby@gmail.com"
-            style="opacity: 1; color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; transition: opacity 0.2s;"
+            style="opacity:1;color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;transition:opacity 0.2s;"
             onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
             Funbi Akintade
           </a>
@@ -603,105 +402,95 @@
       </div>
     </div>
   </footer>
+
   <script>
-    // NAV + MOBILE MENU (single combined script, no duplicates)
+    // NAV + MOBILE MENU
     (function () {
       const navToggle = document.getElementById('navToggle');
       const navClose = document.getElementById('navClose');
       const mobileMenu = document.getElementById('mobileMenu');
 
-      function openMenu() { mobileMenu.classList.add('open'); navToggle?.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
-      function closeMenu() { mobileMenu.classList.remove('open'); navToggle?.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+      function openMenu() { mobileMenu.classList.add('open'); navToggle?.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+      function closeMenu() { mobileMenu.classList.remove('open'); navToggle?.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
 
       navToggle?.addEventListener('click', openMenu);
       navClose?.addEventListener('click', closeMenu);
-      mobileMenu?.addEventListener('click', (e) => { const el = e.target; if (el.id === 'mobileMenu' || el.tagName === 'A') closeMenu(); });
-      window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
-
-      // Active link (works for /, /index.html, hash to #thestory, and /contact.html)
-      const links = document.querySelectorAll('.nav-links a');
-      if (links.length) {
-        const url = new URL(window.location.href);
-        const path = (url.pathname === '/' ? '/index.html' : url.pathname);
-        const hash = url.hash;
-
-        links.forEach(a => a.classList.remove('active'));
-
-        if (path.endsWith('/contact.html')) {
-          document.querySelector('.nav-links a[href$="contact.html"]')?.classList.add('active');
-        } else if (hash === '#thestory') {
-          document.querySelector('.nav-links a[href$="#thestory"]')?.classList.add('active');
-        } else if (path.endsWith('/index.html')) {
-          document.querySelector('.nav-links a[href="index.html"]')?.classList.add('active');
-        }
-      }
+      mobileMenu?.addEventListener('click', (e) => { if (e.target.id==='mobileMenu'||e.target.tagName==='A') closeMenu(); });
+      window.addEventListener('keydown', (e) => { if (e.key==='Escape'&&mobileMenu.classList.contains('open')) closeMenu(); });
     })();
 
-    // Form helpers
-    const form = document.getElementById('bookingForm');
+    // Char counter
     const message = document.getElementById('message');
-    const count = document.getElementById('count');
-    const errors = document.getElementById('formErrors');
-    const submitBtn = document.getElementById('submitBtn');
+    const count   = document.getElementById('count');
+    message?.addEventListener('input', () => { count.textContent = message.value.length + ' / ' + message.maxLength; });
+
+    // Form submission via Formspree (AJAX)
+    const form       = document.getElementById('bookingForm');
+    const errors     = document.getElementById('formErrors');
+    const submitBtn  = document.getElementById('submitBtn');
     const successState = document.getElementById('successState');
 
-    function setError(input, msg) {
-      input.classList.add('error');
+    function showError(msg) {
       errors.classList.remove('hidden');
       errors.textContent = msg;
     }
-    function clearError(input) {
-      input.classList.remove('error');
+    function clearErrors() {
       errors.classList.add('hidden');
       errors.textContent = '';
+      document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
     }
-
-    message?.addEventListener('input', () => { count.textContent = message.value.length + ' / ' + message.maxLength; });
 
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const required = ['name', 'email', 'project', 'message', 'consent'];
+      clearErrors();
+
+      // Client-side validation
       let bad = false;
-      required.forEach(id => {
+      ['name','email','project','message'].forEach(id => {
         const el = document.getElementById(id);
-        if (!el) return;
-        if ((el.type === 'checkbox' && !el.checked) || (el.type !== 'checkbox' && !el.value.trim())) {
-          setError(el.closest('.field')?.querySelector('.input, .select, .textarea') || el, 'Please complete all required fields.');
+        if (!el || !el.value.trim()) {
+          el?.classList.add('error');
           bad = true;
         }
       });
+      const consentEl = document.getElementById('consent');
+      if (!consentEl.checked) { consentEl.classList.add('error'); bad = true; }
+
       const emailEl = document.getElementById('email');
-      if (emailEl && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) { setError(emailEl, 'Enter a valid email.'); bad = true; }
-      if (bad) return;
+      if (emailEl && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+        emailEl.classList.add('error'); bad = true;
+      }
 
-      document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-      clearError(emailEl);
+      if (bad) { showError('Please complete all required fields correctly.'); return; }
 
-      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
       try {
-        const formData = new FormData(form);
-        const res = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
         if (res.ok) {
           form.reset();
-          count.textContent = '0 / ' + (message?.maxLength || 1200);
+          count.textContent = '0 / 1200';
           successState.classList.remove('hidden');
-          errors.classList.add('hidden');
+          form.querySelectorAll('input,select,textarea,button').forEach(el => el.disabled = true);
         } else {
           const data = await res.json().catch(() => ({}));
-          throw new Error(data.error || 'Submission failed. Please try again later.');
+          throw new Error(data.error || 'Submission failed. Please try again.');
         }
       } catch (err) {
-        errors.classList.remove('hidden');
-        errors.textContent = err.message || 'Something went wrong. Please try again later.';
+        showError(err.message || 'Something went wrong. Please try again.');
       } finally {
-        submitBtn.disabled = false; submitBtn.textContent = 'Send enquiry';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send enquiry';
       }
     });
 
-    // Set current year in footer
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
